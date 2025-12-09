@@ -1497,9 +1497,11 @@ function initPhoneMockupVideos() {
             item.classList.toggle('active', i === index);
             
             if (i === index) {
+                video.currentTime = 0; // Reset to start
                 video.play().catch(e => console.log('Video autoplay prevented:', e));
             } else {
                 video.pause();
+                video.currentTime = 0;
             }
         });
         
@@ -1515,37 +1517,49 @@ function initPhoneMockupVideos() {
         showVideo(nextIndex);
     }
     
-    function startAutoplay() {
-        if (videoAutoplayTimer) clearInterval(videoAutoplayTimer);
-        videoAutoplayTimer = setInterval(nextVideo, 5000);
-    }
+    // Add ended event listeners to all videos for seamless transitions
+    videoItems.forEach((item, index) => {
+        const video = item.querySelector('.student-video');
+        
+        video.addEventListener('ended', () => {
+            // Smoothly transition to next video when current one ends
+            setTimeout(() => {
+                nextVideo();
+            }, 500); // Small delay for smooth transition
+        });
+        
+        video.addEventListener('error', (e) => {
+            console.error('Video error:', e);
+            // Skip to next video if there's an error
+            setTimeout(nextVideo, 1000);
+        });
+    });
     
     // Initialize first video
     showVideo(0);
-    
-    // Start autoplay
-    startAutoplay();
     
     // Pause on hover
     const phoneShowcase = document.querySelector('.phone-showcase-container');
     if (phoneShowcase) {
         phoneShowcase.addEventListener('mouseenter', () => {
-            if (videoAutoplayTimer) clearInterval(videoAutoplayTimer);
+            const currentVideo = videoItems[currentVideoIndex].querySelector('.student-video');
+            currentVideo.pause();
         });
         
-        phoneShowcase.addEventListener('mouseleave', startAutoplay);
+        phoneShowcase.addEventListener('mouseleave', () => {
+            const currentVideo = videoItems[currentVideoIndex].querySelector('.student-video');
+            currentVideo.play().catch(e => console.log('Resume prevented:', e));
+        });
     }
     
     // Add click navigation to info cards
     infoCards.forEach((card, index) => {
         card.addEventListener('click', () => {
             showVideo(index);
-            if (videoAutoplayTimer) clearInterval(videoAutoplayTimer);
-            startAutoplay();
         });
     });
     
-    console.log('Phone video showcase initialized with', totalVideos, 'videos');
+    console.log('Phone video showcase initialized with', totalVideos, 'interview videos');
 }
 
 // Export functions for global access
