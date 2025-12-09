@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Regis Innovation Center</title>
+    <link rel="icon" type="image/x-icon" href="assets/logo.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/about.css">
+</head>
+<body>
+    <!-- Ultra-Premium Header Start -->
+    <header class="premium-header">
+        <!-- Elegant Announcement Bar -->
+        <div class="announcement-strip">
+            <div class="announcement-content">
+                <div class="announcement-pulse"></div>
+                <span class="announcement-label">Open House - Night 1</span>
+                <span class="announcement-text">3rd Floor, Clarke Hall, Room 358. Regis University Northwest Denver Campus</span>
+                <button class="announcement-dismiss">✕</button>
+            </div>
+        </div>
+        
+        <!-- Main Navigation Header -->
+        <nav class="main-navigation" role="navigation">
+            <div class="nav-container">
+                <!-- Brand Section -->
+                <div class="brand-zone">
+                    <a href="index.html" class="brand-link">
+                        <img src="assets/logo.png" alt="Regis Innovation Center" class="official-logo">
+                    </a>
+                </div>
+                
+                <!-- Navigation Links -->
+                <div class="nav-links-zone">
+                    <ul class="nav-menu">
+                        <li class="nav-item">
+                            <a href="about.html" class="nav-link active" data-text="About">
+                                <span class="link-text">About</span>
+                                <span class="link-effect"></span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="events.html" class="nav-link" data-text="Events">
+                                <span class="link-text">Events</span>
+                                <span class="link-effect"></span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="stories.html" class="nav-link" data-text="Stories">
+                                <span class="link-text">Stories</span>
+                                <span class="link-effect"></span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="ventures.html" class="nav-link" data-text="Ventures">
+                                <span class="link-text">Ventures</span>
+                                <span class="link-effect"></span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="index.html#contact" class="nav-link" data-text="Contact">
+                                <span class="link-text">Contact</span>
+                                <span class="link-effect"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Action Zone -->
+                <div class="action-zone">
+                    <button class="menu-toggle" aria-label="Toggle menu">
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Impacting Students Section - Sophisticated Horizontal Scroll Experience -->
+    <section class="impacting-students-section">
+        <!-- Horizontal Scroll Container -->
+        <div class="horizontal-scroll-container">
+            <!-- Sophisticated Edge Navigation -->
+            <div class="edge-navigation">
+                <div class="edge-nav-trigger left" id="leftEdge">
+                    <div class="edge-nav-arrow" onclick="scrollToPanel('prev')">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="m15 18-6-6 6-6"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="edge-nav-trigger right" id="rightEdge">
+                    <div class="edge-nav-arrow" onclick="scrollToPanel('next')">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="m9 18 6-6-6-6"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-track" id="studentScrollTrack">
+                
+                <!-- Panel 1: Our Mission -->
+                <div class="impact-panel active" data-panel="0">
+                    <div class="panel-image">
+                        <img src="assets/image4.jpg" alt="Our Mission - Innovation Center">
+                        <div class="image-overlay"></div>
+                    </div>
+                    <div class="panel-content">
+                        <div class="content-tag">Our Mission</div>
+                        <h3 class="panel-title">Bringing Innovation Together</h3>
+                        <p class="panel-text">
+                            The Innovation Center seeks to bring together students, faculty, alumni, and the community to design critical, creative and system solutions for our curriculum and the complex challenges of today's world.
+                        </p>
+                        <div class="panel-stats">
+                            <div class="stat-item">
+                                <span class="stat-number" data-target="214">0</span><span class="stat-plus">+</span>
+                                <span class="stat-label">Businesses Launched</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Panel 2: Capital Investment -->
+                <div class="impact-panel" data-panel="1">
+                    <div class="panel-image">
+                        <img src="assets/image2.jpg" alt="Capital Investment and Business Support">
+                        <div class="image-overlay"></div>
+                    </div>
+                    <div class="panel-content">
+                        <div class="content-tag">Investment & Growth</div>
+                        <h3 class="panel-title">Fueling Innovation</h3>
+                        <p class="panel-text">
+                            We invest at least $17,000 into businesses each year, providing crucial capital and resources to help innovative ventures grow and succeed in today's competitive market.
+                        </p>
+                        <div class="panel-stats">
+                            <div class="stat-item">
+                                <span class="stat-number" data-target="250">0</span><span class="stat-unit">K+</span>
+                                <span class="stat-label">Capital Invested</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Panel 3: Years of Operation -->
+                <div class="impact-panel" data-panel="2">
+                    <div class="panel-image">
+                        <img src="assets/image3.jpg" alt="Years of Innovation Excellence">
+                        <div class="image-overlay"></div>
+                    </div>
+                    <div class="panel-content">
+                        <div class="content-tag">Experience & Excellence</div>
+                        <h3 class="panel-title">Proven Track Record</h3>
+                        <p class="panel-text">
+                            With 9 years of dedicated operation, we have built a robust ecosystem of innovation, continuously evolving our approach to meet the changing needs of the entrepreneurial landscape.
+                        </p>
+                        <div class="panel-stats">
+                            <div class="stat-item">
+                                <span class="stat-number" data-target="9">0</span>
+                                <span class="stat-label">Years of Innovation</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="scroll-progress-bar">
+            <div class="progress-fill" id="scrollProgress"></div>
+        </div>
+    </section>
+
+    <!-- Hero Section -->
+    <!-- About Hero Banner Section -->
+    <section class="about-hero-banner">
+        <div class="container">
+            <div class="about-hero-content">
+                <h1 class="about-title">About the innovation Challenge</h1>
+                <p class="about-subtitle">Empowering the next generation of entrepreneurs and innovators to transform ideas into impactful solutions</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Open to Community Section -->
+    <section class="gronowski-lab-section">
+        <div class="container lab-container">
+            <div class="lab-grid">
+                <!-- Left Column: Title and Primary Text -->
+                <div class="lab-left">
+                    <div class="lab-title-block" aria-label="Open to the Community">
+                        <span class="lab-title-line">OPEN TO THE</span>
+                        <span class="lab-title-line">COMMUNITY</span>
+                    </div>
+
+                    <div class="lab-text">
+                        <div class="community-text-container">
+                            <p class="lab-lead">
+                                THE ONLY INNOVATION CHALLENGE OPEN TO THE ENTIRE COMMUNITY.
+                            </p>
+                            <p>
+                                The Regis Innovation Challenge welcomes students, alumni, faculty, and community members from all backgrounds and locations. We've hosted participants from around the world, bringing diverse perspectives and groundbreaking ideas to our stage.
+                            </p>
+                            <p>
+                                Whether you're a local entrepreneur or an international innovator with a bold vision, you're welcome to join our challenge and bring your ideas to life.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Top Image, Secondary Text, Bottom Image -->
+                <div class="lab-right">
+                    <div class="lab-top-image">
+                        <img src="assets/Community.jpg" alt="Students collaborating in the incubator lab">
+                    </div>
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fully Student Run Programme Section -->
+    <section class="gronowski-lab-section student-run-section">
+        <div class="container lab-container">
+            <div class="lab-grid">
+                <!-- Left Column: Title and Primary Text -->
+                <div class="lab-left">
+                    <div class="lab-title-block" aria-label="Fully Student Run Programme">
+                        <span class="lab-title-line">FULLY STUDENT</span>
+                        <span class="lab-title-line">RUN PROGRAMME</span>
+                    </div>
+
+                    <div class="lab-text">
+                        <div class="community-text-container">
+                            <p class="lab-lead">
+                                EMPOWERING STUDENTS TO LEAD AND INNOVATE.
+                            </p>
+                            <p>
+                                The Regis Innovation Center is proudly led by students, for students. Our programmes are designed, managed, and executed by passionate student leaders who understand the entrepreneurial journey firsthand.
+                            </p>
+                            <p>
+                                This student-driven approach creates an authentic, dynamic environment where innovation thrives through peer collaboration, hands-on experience, and real-world problem solving.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Beautiful Horizontal Carousel -->
+                <div class="lab-right">
+                    <div class="student-carousel-new">
+                        <button class="carousel-nav-new carousel-prev-new" aria-label="Previous slide">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="m15 18-6-6 6-6"/>
+                            </svg>
+                        </button>
+                        
+                        <div class="carousel-viewport">
+                            <div class="carousel-track-new" id="studentCarouselTrack">
+                                <div class="carousel-slide-new active">
+                                    <img src="assets/about1.jpg" alt="Student Innovation">
+                                </div>
+                                <div class="carousel-slide-new">
+                                    <img src="assets/about2.JPG" alt="Student Collaboration">
+                                </div>
+                                <div class="carousel-slide-new">
+                                    <img src="assets/about3.JPG" alt="Student Leadership">
+                                </div>
+                                <div class="carousel-slide-new">
+                                    <img src="assets/about4.jpg" alt="Student Workshop">
+                                </div>
+                                <div class="carousel-slide-new">
+                                    <img src="assets/Community.jpg" alt="Community Engagement">
+                                </div>
+                                <div class="carousel-slide-new">
+                                    <img src="assets/image1.jpg" alt="Innovation Hub">
+                                </div>
+                                <div class="carousel-slide-new">
+                                    <img src="assets/image2.jpg" alt="Student Teams">
+                                </div>
+                                <div class="carousel-slide-new">
+                                    <img src="assets/image3.jpg" alt="Learning Environment">
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="carousel-nav-new carousel-next-new" aria-label="Next slide">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="m9 18 6-6-6-6"/>
+                            </svg>
+                        </button>
+                        
+                        <div class="carousel-indicators-new" id="carouselIndicators"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impacting Students Header Section - Redesigned -->
+    <section class="impacting-header-section-new">
+        <div class="impact-background-animation">
+            <div class="floating-shape shape-1"></div>
+            <div class="floating-shape shape-2"></div>
+            <div class="floating-shape shape-3"></div>
+        </div>
+        
+        <div class="container">
+            <div class="impact-header-content">
+                <div class="impact-eyebrow" data-aos="fade-down">OUR IMPACT</div>
+                <h2 class="impact-main-title" data-aos="fade-up" data-aos-delay="100">
+                    <span class="title-word">Impacting</span>
+                    <span class="title-word highlight">Students</span>
+                </h2>
+                <p class="impact-subtitle" data-aos="fade-up" data-aos-delay="200">
+                    Students are the heart of the Innovation Center. We focus on creating exceptional experiences that empower the next generation of entrepreneurs and innovators.
+                </p>
+            </div>
+            
+            <!-- Phone Showcase Section -->
+            <div class="phone-showcase-container" data-aos="fade-up" data-aos-delay="300">
+                <div class="student-info-display">
+                    <div class="info-card active" data-info="0">
+                        <div class="student-avatar">
+                            <div class="avatar-circle">RX</div>
+                        </div>
+                        <div class="student-details">
+                            <h3 class="student-name">Sarah Mitchell</h3>
+                            <p class="business-name">RenewRX</p>
+                            <p class="business-description">Revolutionizing sustainable healthcare solutions</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-card" data-info="1">
+                        <div class="student-avatar">
+                            <div class="avatar-circle">AG</div>
+                        </div>
+                        <div class="student-details">
+                            <h3 class="student-name">Marcus Chen</h3>
+                            <p class="business-name">Agera</p>
+                            <p class="business-description">AI-powered agricultural technology</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-card" data-info="2">
+                        <div class="student-avatar">
+                            <div class="avatar-circle">10K</div>
+                        </div>
+                        <div class="student-details">
+                            <h3 class="student-name">David Rodriguez</h3>
+                            <p class="business-name">10K Athletics</p>
+                            <p class="business-description">Performance training and sports innovation</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-card" data-info="3">
+                        <div class="student-avatar">
+                            <div class="avatar-circle">TE</div>
+                        </div>
+                        <div class="student-details">
+                            <h3 class="student-name">Emily Thompson</h3>
+                            <p class="business-name">Tap Energy</p>
+                            <p class="business-description">Renewable energy solutions for communities</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-card" data-info="4">
+                        <div class="student-avatar">
+                            <div class="avatar-circle">OM</div>
+                        </div>
+                        <div class="student-details">
+                            <h3 class="student-name">James Peterson</h3>
+                            <p class="business-name">Old Medows</p>
+                            <p class="business-description">Heritage conservation and sustainable farming</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-card" data-info="5">
+                        <div class="student-avatar">
+                            <div class="avatar-circle">TG</div>
+                        </div>
+                        <div class="student-details">
+                            <h3 class="student-name">Lisa Anderson</h3>
+                            <p class="business-name">Traveling Ground</p>
+                            <p class="business-description">Sustainable tourism and cultural experiences</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="phone-mockup">
+                    <div class="phone-frame">
+                        <div class="phone-notch"></div>
+                        <div class="phone-screen">
+                            <div class="video-feed" id="studentVideoFeed">
+                                <!-- Videos will auto-scroll here -->
+                                <div class="video-item active" data-video="0">
+                                    <video class="student-video" autoplay muted loop playsinline>
+                                        <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class="video-item" data-video="1">
+                                    <video class="student-video" muted loop playsinline>
+                                        <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class="video-item" data-video="2">
+                                    <video class="student-video" muted loop playsinline>
+                                        <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class="video-item" data-video="3">
+                                    <video class="student-video" muted loop playsinline>
+                                        <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class="video-item" data-video="4">
+                                    <video class="student-video" muted loop playsinline>
+                                        <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class="video-item" data-video="5">
+                                    <video class="student-video" muted loop playsinline>
+                                        <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="phone-home-button"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section - Beautiful 3 Card Ecosystem -->
+    <section class="programs-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Comprehensive Innovation Ecosystem</h2>
+                <p class="section-description">Discover the pillars that support our thriving community of innovators and entrepreneurs</p>
+            </div>
+            
+            <div class="ecosystem-grid">
+                <!-- Card 1: Magis Factory -->
+                <div class="ecosystem-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-image-wrapper">
+                        <img src="assets/ecosystem/magis.jpg" alt="Magis Factory" class="card-image">
+                        <div class="card-overlay"></div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Magis Factory</h3>
+                        <p class="card-description">
+                            Colorado's only full-time accelerator for start-ups, dedicated to serving Regis University students, alumni, and their business teams. From idea to reality, we bring start-ups of all stages to their full potential through funding, mentorship, and professional engagement.
+                        </p>
+                        <div class="card-feature-list">
+                            <div class="feature-item">
+                                <span class="feature-icon">✓</span>
+                                <span>Access to Funding & Resources</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">✓</span>
+                                <span>Expert Mentorship & Tools</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">✓</span>
+                                <span>Professional Engagement</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Golden Startup Coffee -->
+                <div class="ecosystem-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-image-wrapper">
+                        <img src="assets/ecosystem/golden.jpg" alt="Golden Startup Coffee" class="card-image">
+                        <div class="card-overlay"></div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Golden Startup Coffee</h3>
+                        <p class="card-description">
+                            A monthly morning meetup for entrepreneurs, innovators, and professionals to learn, contribute, and inspire. Join us every second Wednesday from 9:00am-11:00am to connect with Golden's thriving entrepreneurial community over fresh local brew.
+                        </p>
+                        <div class="card-feature-list">
+                            <div class="feature-item">
+                                <span class="feature-icon">✓</span>
+                                <span>Interactive Presentations & Q&A</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">✓</span>
+                                <span>Community Networking</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">✓</span>
+                                <span>Second Wednesdays, 9:00 AM</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Colorado Sustainability Challenge -->
+                <div class="ecosystem-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card-image-wrapper">
+                        <img src="assets/ecosystem/sustainability.jpg" alt="Colorado Sustainability Challenge" class="card-image">
+                        <div class="card-overlay"></div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Colorado Sustainability Challenge</h3>
+                        <p class="card-description">
+                            A statewide two-week collaborative event for anyone passionate about solving sustainability problems. Team up, build solutions, and compete for a share of $25,000! Open to all academic disciplines, hosted by CU Boulder in partnership with affiliate institutions.
+                        </p>
+                        <div class="card-feature-list">
+                            <div class="feature-item">
+                                <span class="feature-icon">✓</span>
+                                <span>$25,000 in Prizes</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">✓</span>
+                                <span>All Academic Disciplines Welcome</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">✓</span>
+                                <span>Hybrid Event at CU Boulder</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Facilities Section -->
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Ready to Start Your Innovation Journey?</h2>
+                <p class="cta-description">
+                    Join the Regis Innovation Center community and transform your ideas into reality. 
+                    Whether you're a student, faculty member, or community partner, there's a place for you here.
+                </p>
+                <div class="cta-actions">
+                    <a href="#contact" class="primary-button">
+                        <span>Apply Now</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="events.php" class="secondary-button">
+                        <span>Upcoming Events</span>
+                        <i class="fas fa-calendar"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="assets/images/regis-logo-white.png" alt="Regis Innovation Center" class="footer-logo">
+                    <p>Fostering innovation and entrepreneurship in the heart of Denver</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="#programs">Programs</a></li>
+                        <li><a href="events.html">Events</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Programs</h4>
+                    <ul>
+                        <li><a href="#">Innovation Incubator</a></li>
+                        <li><a href="#">Skills Workshops</a></li>
+                        <li><a href="#">Mentorship Network</a></li>
+                        <li><a href="#">Startup Accelerator</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link">LinkedIn</a>
+                        <a href="#" class="social-link">Twitter</a>
+                        <a href="#" class="social-link">Facebook</a>
+                        <a href="#" class="social-link">Instagram</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Regis Innovation Center. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/about.js"></script>
+</body>
+</html>
