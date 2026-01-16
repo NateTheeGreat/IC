@@ -1,0 +1,101 @@
+Hungry App
+
+Hungry is a location based food and event deals app designed to connect users with weekly restaurant discounts tailored to their tastes. Users can redeem special offers such as Taco Tuesday deals, Thursday tequila BOGO, and Monday margaritas and earn points each time they use an offer. Those points can be redeemed for additional discounts later.
+For restaurants, Hungry provides an easy and cost-effective way to promote themselves without needing to run large email campaigns or spend money on traditional marketing. Restaurants can opt in directly through the app if they want to be promoted alongside other featured locations.
+Our future second phase will expand into concert venues and event spaces, offering users discounts on shows, experiences, and nightlife options while helping venues boost local attendance.
+We are building a platform that helps food lovers explore their city, helps restaurants attract loyal customers, and creates a fun, community-driven experience around weekly deals.
+
+MeanderEV
+
+Adventure, Please.
+At MeanderEV, that’s not a slogan — it’s our fuel. We’re founders, builders, and visionaries taking on a mission most people think is too big, too early, or impossible. That’s exactly why we’re doing it. The infrastructure for the future EV world doesn’t exist… 
+So we’re building it, through a simple App.
+Some of the biggest companies today didn't exist 5 years ago.
+That means that the biggest, most money-making companies of 2030 are being invented right now… and we intend to be one of them.
+If the Mayflower launched today…
+If Lewis & Clark set out in the age of tech…
+If the US looked to put it's first man on Mars next month...  
+We'd want to be on the team. We're looking for visionaries. People who can foresee a problem and drive an effort to tackle it.
+No egos, no coasting, no passengers. Everyone contributes. Everyone grows. Everyone pushes the mission forward. 
+We are a SaaS company (Software-as-a-Service) building and simplifying an app. 
+And we’re not thinking small.
+We’re already expanding internationally — with strong partnerships forming in Puerto Rico, Bermuda, and beyond. 
+If you want challenge, purpose, and momentum — welcome aboard!
+What we’re building:
+A nationwide and international network of monetized Level-2 chargers powered by our App.
+A world where “home charging” is available to anyone, not just homeowners.
+A product that helps property owners turn their parking lots into money making machines, while helping build a sustainable infrastructure.
+A culture where everyone contributes. The CEO also sweeps the floor.
+A rhythm of learning, iterating, and creating.
+A bold mission: redefine EV charging across the U.S., and then ultimately, the world.
+Are you ready for an Adventure?
+
+Pickup Play
+
+Pickup Play is connecting the pickup sports community in real-time.  We're reclaiming sports as a simple way to go play, and we do this by introducing people with the right groups along with the space to accommodate their game.  We are a player-centric network marketplace driven by users self-organizing games in their neighborhoods while aligning them with the spaces and programs available near them.  With millions of people actively looking to continue playing the sports we all love, we're stepping in to provide an easier way to make casual play a more regular part of everyone's wellness routine.
+
+RealxRealAi
+
+realxreal.ai — Fraud & Deepfake Prevention Via Using Shared Memories
+Deepfake scams cost victims $200 million in Q1 2025 alone, and the problem is getting worse. AI can
+now clone anyone's voice in 3 seconds and generate photorealistic video in real-time. Traditional AI
+detection is failing. We’re in an arms race where attackers always catch up.
+realxreal takes a different approach. Instead of detecting fakes, we verify humans through something
+AI can never access: shared memories.
+realxreal is a trusted contacts app where each connection is verified through shared memories you’ve
+lived together. Instead of passwords, phone numbers, or server checks, your phone can recognize people
+the same way you do–through shared memories. Before a call, message, or video chat begins, the app
+confirms that both people are who they say they are instantly, securely, and privately. Deepfakes can clone
+voices and faces perfectly, but they can't fake lived experiences.
+What we're building:
+iOS app (launching December 2025): Secure contacts verified through shared memories
+Android app (launching late Q1 / early Q2): Exact same features , privacy controls , and
+security features as iOS app
+Enterprise dashboard: Security teams manage trust and authentication across organizations
+Open protocol: Like Signal Protocol, but for deepfake prevention
+Market opportunity:
+$1 trillion lost to scams globally in 2024
+62% of small businesses experienced deepfake attacks
+No existing solution addresses consumer-side deepfake protection
+Traction:
+Received non-dilutive funding (Austin McChord, founder of Datto+ 1517 Fund)
+Accepted into YC AI Startup School and The Residency Program
+Invited to Global Anti-Scam Alliance conference (December 2025) where target customers will
+be 25+ customer discovery conversations with credit unions, CISOs, and security experts
+We're looking for student team members who are excited about privacy, preventing scams & fraud,
+cybersecurity, mobile development, or business development. You'll work directly with the founder on
+product development, customer discovery, or go-to-market strategy. This is a unique opportunity to join
+an early-stage startup tackling one of the most pressing security challenges of the AI era.
+Founder: Jonathan Bateman — Applied Math & Computing Security + Sociology & Anthropology
+double major, Open Source & Privacy Advocate, part-time anthropologist, self-taught iOS developer, YC
+AI Startup School alum.
+
+SeedUp
+
+SEED UP is a gamified financial-learning and investing app built to help young people understand money and investing in a simple, fun, and safe way.
+Users learn through micro-lessons, complete missions,  and practice investing in a virtual market simulator before ever risking real money.
+Our mission is to empower beginners with financial confidence by combining education, gamification, and hands-on practice.
+
+Third Space Pilates
+
+Third Space Pilates is a modern wellness Pilates studio designed to be more than just a workout —it’s a sanctuary. Unlike traditional fitness studios where clients rush in and out, Third Space creates an intentional environment that blends Pilates, community, and mental wellbeing. Think Spa inspired locker rooms, lounge spaces, and killer Pilates classes. 
+The studio offers hot mat Pilates classes, curated recovery rituals, and a calming space where people can reconnect with themselves and others. Our mission is to create a “third space” a place outside of home and work where people feel grounded, supported, and connected. 
+Our focus is on thoughtful design, high-quality instruction, and a membership model that prioritizes experience over volume. Students joining our team will help shape market strategy, financial plans, and brand identity as we prepare this concept for launch. 
+
+Time to Play
+
+Who We Are: Time to Play is addressing the youth mental health crisis by fostering friendship and belonging in elementary age students. We make playdates easy so that they actually happen. Research indicates that positive peer experiences as early as age 5 can protect against anxiety and depression throughout life. We’re building an AI-powered app that takes the mental load off parents by simplifying playdate scheduling and helping them manage their children’s social lives with ease. 
+What You’ll Do: If you care about mental health and want to be part of a high-impact startup where you’ll learn fast and contribute immediately, join Time to Play. You’ll get real exposure to agile teamwork, AI-powered product development, sales and marketing strategy, and the inside workings of a growing, mission-focused company—while learning directly from our female founder, Esther Davy, a seasoned sales and marketing expert, and our highly successful CTO, Ogi Grba, a four-time founder himself.
+Traction: We have piloted Time to Play in four elementary schools and are actively learning from parent, teacher, and administrator feedback. Beyond our school pilots, we host two community playgroups in Golden and Arvada and are launching a preschool pilot in December. With the addition of a highly experienced CTO, we are now able to rapidly implement the customer insights we gather and integrate AI-driven features that streamline scheduling and make the app even more intuitive for busy families.
+What’s Next: Our next steps are to refine the product based on real-world pilot data, enhance the platform with AI, and run a PR and marketing campaign to engage early adopters. Once key customer feedback is implemented, we will move into a full market launch supported by influencer partnerships, media outreach, community events, and a robust sales strategy targeting elementary schools and preschools.
+
+Tot Friendly Homes
+
+Tot Friendly Homes is a short-term rental consultancy that partners with property owners to create thoughtfully designed, family-ready stays for guests with children under the age of five. We bridge the gap between luxury hospitality and real family life, where elevated design meets everyday, essential comfort.
+Each property meets our verified standards for safety, style, and ease—earning the right to license Tot Friendly Homes marketing assets, trusted symbols parents can recognize with confidence and property owners can proudly promote. Because when travel feels effortless, families make room for what matters most: connection, comfort, and calm.
+We make family travel feel effortless—combining premium design, thoughtful details, and trusted consistency to give parents peace of mind and partners the power of distinction.
+
+Tutio
+
+Tutio is a platform designed to make childcare more accessible for every family in Colorado. Parents often struggle to find daycares they can trust—places that are affordable, nearby, and available. Licensed childcare providers, meanwhile, frequently have open spots but lack the visibility needed to reach families quickly. Tutio solves both challenges.
+Our platform connects parents to affordable, verified daycare options through an intuitive search experience that filters by price, location, hours, availability, and educational focus. For providers, Tutio offers a simple way to list openings, manage inquiries, and reach more families without expensive marketing.

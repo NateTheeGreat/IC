@@ -13,27 +13,18 @@
     
     <!-- Styles -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/components.css">
     <link rel="stylesheet" href="assets/css/about.css">
 </head>
 <body>
     <!-- Ultra-Premium Header Start -->
     <header class="premium-header">
-        <!-- Elegant Announcement Bar -->
-        <div class="announcement-strip">
-            <div class="announcement-content">
-                <div class="announcement-pulse"></div>
-                <span class="announcement-label">Open House - Night 1</span>
-                <span class="announcement-text">3rd Floor, Clarke Hall, Room 358. Regis University Northwest Denver Campus</span>
-                <button class="announcement-dismiss">✕</button>
-            </div>
-        </div>
-        
         <!-- Main Navigation Header -->
         <nav class="main-navigation" role="navigation">
             <div class="nav-container">
                 <!-- Brand Section -->
                 <div class="brand-zone">
-                    <a href="index.html" class="brand-link">
+                    <a href="#home" class="brand-link">
                         <img src="assets/logo.png" alt="Regis Innovation Center" class="official-logo">
                     </a>
                 </div>
@@ -41,6 +32,12 @@
                 <!-- Navigation Links -->
                 <div class="nav-links-zone">
                     <ul class="nav-menu">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link" data-text="Home">
+                                <span class="link-text">Home</span>
+                                <span class="link-effect"></span>
+                            </a>
+                        </li>
                         <li class="nav-item">
                             <a href="about.html" class="nav-link active" data-text="About">
                                 <span class="link-text">About</span>
@@ -54,37 +51,71 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="stories.html" class="nav-link" data-text="Stories">
-                                <span class="link-text">Stories</span>
-                                <span class="link-effect"></span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
                             <a href="ventures.html" class="nav-link" data-text="Ventures">
                                 <span class="link-text">Ventures</span>
                                 <span class="link-effect"></span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="index.html#contact" class="nav-link" data-text="Contact">
-                                <span class="link-text">Contact</span>
+                            <a href="stories.html" class="nav-link" data-text="Stories">
+                                <span class="link-text">Stories</span>
+                                <span class="link-effect"></span>
+                            </a>
+                        </li>
+                        <li class="nav-item has-dropdown">
+                            <a href="the-challenge.html" class="nav-link" data-text="The Challenge">
+                                <span class="link-text">The Challenge</span>
+                                <span class="link-effect"></span>
+                                <span class="dropdown-arrow">▼</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="the-challenge.html" class="dropdown-link">Overview</a></li>
+                                <li><a href="this-years-businesses.html" class="dropdown-link">This Year's Businesses</a></li>
+                                <li><a href="mentor.html" class="dropdown-link">Mentor with Us</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="https://give.regis.edu/campaigns/21516/donations/new" target="_blank" rel="noopener noreferrer" class="nav-link" data-text="Give">
+                                <span class="link-text">Give</span>
                                 <span class="link-effect"></span>
                             </a>
                         </li>
                     </ul>
+                    <div class="nav-highlight"></div>
                 </div>
                 
                 <!-- Action Zone -->
                 <div class="action-zone">
-                    <button class="menu-toggle" aria-label="Toggle menu">
+                    <button class="hamburger-toggle" aria-label="Menu" aria-expanded="false">
                         <span class="hamburger-line"></span>
                         <span class="hamburger-line"></span>
                         <span class="hamburger-line"></span>
                     </button>
                 </div>
             </div>
+            
+            <!-- Beautiful Separator Line -->
+            <div class="header-separator"></div>
+            
+            <!-- Mobile Menu -->
+            <div class="mobile-menu" id="mobileMenu">
+                <div class="mobile-menu-content">
+                    <ul class="mobile-nav-list">
+                        <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+                        <li><a href="about.html" class="mobile-nav-link active">About</a></li>
+                        <li><a href="events.html" class="mobile-nav-link">Events</a></li>
+                        <li><a href="ventures.html" class="mobile-nav-link">Ventures</a></li>
+                        <li><a href="stories.html" class="mobile-nav-link">Stories</a></li>
+                        <li><a href="the-challenge.html" class="mobile-nav-link">The Challenge</a></li>
+                        <li><a href="this-years-businesses.html" class="mobile-nav-link">This Year's Businesses</a></li>
+                        <li><a href="mentor.html" class="mobile-nav-link">Mentor with Us</a></li>
+                        <li><a href="https://give.regis.edu/campaigns/21516/donations/new" target="_blank" rel="noopener noreferrer" class="mobile-nav-link">Give</a></li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
+    <!-- Ultra-Premium Header End -->
 
     <!-- Impacting Students Section - Sophisticated Horizontal Scroll Experience -->
     <section class="impacting-students-section">
@@ -334,48 +365,16 @@
             <!-- Phone Showcase Section -->
             <div class="phone-showcase-container" data-aos="fade-up" data-aos-delay="300">
                 <div class="student-info-display">
-                    <div class="info-card active" data-info="0">
-                        <div class="student-avatar">
-                            <div class="avatar-circle">3S</div>
+                    <div class="business-feature-card">
+                        <div class="feature-logo-small">
+                            <img src="assets/TSP - Logo Transparent .png" alt="Third Space Pilates Logo">
                         </div>
-                        <div class="student-details">
-                            <h3 class="student-name">3 Space Founders</h3>
-                            <p class="business-name">3 Space</p>
-                            <p class="business-description">Innovative workspace solutions for entrepreneurs</p>
-                        </div>
-                    </div>
-                    
-                    <div class="info-card" data-info="1">
-                        <div class="student-avatar">
-                            <div class="avatar-circle">HG</div>
-                        </div>
-                        <div class="student-details">
-                            <h3 class="student-name">Hungry Team</h3>
-                            <p class="business-name">Hungry</p>
-                            <p class="business-description">Food delivery and community connection platform</p>
-                        </div>
-                    </div>
-                    
-                    <div class="info-card" data-info="2">
-                        <div class="student-avatar">
-                            <div class="avatar-circle">RL</div>
-                        </div>
-                        <div class="student-details">
-                            <h3 class="student-name">Real Founders</h3>
-                            <p class="business-name">Real</p>
-                            <p class="business-description">Authentic social networking and engagement</p>
-                        </div>
-                    </div>
-                    
-                    <div class="info-card" data-info="3">
-                        <div class="student-avatar">
-                            <div class="avatar-circle">SA</div>
-                        </div>
-                        <div class="student-details">
-                            <h3 class="student-name">Seed App Team</h3>
-                            <p class="business-name">Seed App</p>
-                            <p class="business-description">Growing ideas into sustainable ventures</p>
-                        </div>
+                        <h3 class="feature-business-name">Third Space Pilates</h3>
+                        <p class="feature-description">
+                            Transforming the wellness industry with a modern approach to fitness that combines traditional pilates methods 
+                            with innovative training techniques. Creating an inclusive space where everyone can discover the power of 
+                            mindful movement and build lasting strength from within.
+                        </p>
                     </div>
                 </div>
                 
@@ -387,22 +386,7 @@
                                 <!-- Interview Videos -->
                                 <div class="video-item active" data-video="0">
                                     <video class="student-video" autoplay playsinline controls>
-                                        <source src="assets/interviews/3 Space.MOV" type="video/mp4">
-                                    </video>
-                                </div>
-                                <div class="video-item" data-video="1">
-                                    <video class="student-video" playsinline controls>
-                                        <source src="assets/interviews/Hungry.MOV" type="video/mp4">
-                                    </video>
-                                </div>
-                                <div class="video-item" data-video="2">
-                                    <video class="student-video" playsinline controls>
-                                        <source src="assets/interviews/Real.MOV" type="video/mp4">
-                                    </video>
-                                </div>
-                                <div class="video-item" data-video="3">
-                                    <video class="student-video" playsinline controls>
-                                        <source src="assets/interviews/seed app.MOV" type="video/mp4">
+                                        <source src="assets/interviews/IMG_0368.mp4" type="video/mp4">
                                     </video>
                                 </div>
                             </div>
@@ -426,7 +410,7 @@
                 <!-- Card 1: Magis Factory -->
                 <div class="ecosystem-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="card-image-wrapper">
-                        <img src="assets/ecosystem/magis.jpg" alt="Magis Factory" class="card-image">
+                        <img src="assets/Magis.svg" alt="Magis Factory" class="card-image">
                         <div class="card-overlay"></div>
                     </div>
                     <div class="card-content">
@@ -434,6 +418,7 @@
                         <p class="card-description">
                             Colorado's only full-time accelerator for start-ups, dedicated to serving Regis University students, alumni, and their business teams. From idea to reality, we bring start-ups of all stages to their full potential through funding, mentorship, and professional engagement.
                         </p>
+                        <a href="https://www.magisfactory.com/" target="_blank" class="learn-more-btn">Learn More</a>
                         <div class="card-feature-list">
                             <div class="feature-item">
                                 <span class="feature-icon">✓</span>
@@ -462,6 +447,7 @@
                         <p class="card-description">
                             A monthly morning meetup for entrepreneurs, innovators, and professionals to learn, contribute, and inspire. Join us every second Wednesday from 9:00am-11:00am to connect with Golden's thriving entrepreneurial community over fresh local brew.
                         </p>
+                        <a href="https://www.connectsworkspace.com/golden-startup-coffee" target="_blank" class="learn-more-btn">Learn More</a>
                         <div class="card-feature-list">
                             <div class="feature-item">
                                 <span class="feature-icon">✓</span>
@@ -490,6 +476,7 @@
                         <p class="card-description">
                             A statewide two-week collaborative event for anyone passionate about solving sustainability problems. Team up, build solutions, and compete for a share of $25,000! Open to all academic disciplines, hosted by CU Boulder in partnership with affiliate institutions.
                         </p>
+                        <a href="https://www.colorado.edu/innovate/colorado-sustainability-challenge" target="_blank" class="learn-more-btn">Learn More</a>
                         <div class="card-feature-list">
                             <div class="feature-item">
                                 <span class="feature-icon">✓</span>
@@ -521,11 +508,11 @@
                     Whether you're a student, faculty member, or community partner, there's a place for you here.
                 </p>
                 <div class="cta-actions">
-                    <a href="#contact" class="primary-button">
+                    <a href="https://forms.gle/pkfB3ZGbuVr3WY3q6" target="_blank" rel="noopener noreferrer" class="primary-button">
                         <span>Apply Now</span>
                         <i class="fas fa-arrow-right"></i>
                     </a>
-                    <a href="events.php" class="secondary-button">
+                    <a href="events.html" class="secondary-button">
                         <span>Upcoming Events</span>
                         <i class="fas fa-calendar"></i>
                     </a>
@@ -539,38 +526,42 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <img src="assets/images/regis-logo-white.png" alt="Regis Innovation Center" class="footer-logo">
+                    <img src="assets/logo.png" alt="Regis Innovation Center" class="footer-logo">
                     <p>Fostering innovation and entrepreneurship in the heart of Denver</p>
                 </div>
                 <div class="footer-section">
                     <h4>Quick Links</h4>
                     <ul>
+                        <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About</a></li>
-                        <li><a href="#programs">Programs</a></li>
                         <li><a href="events.html">Events</a></li>
+                        <li><a href="ventures.html">Ventures</a></li>
+                        <li><a href="stories.html">Stories</a></li>
+                        <li><a href="the-challenge.html">The Challenge</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h4>Programs</h4>
                     <ul>
-                        <li><a href="#">Innovation Incubator</a></li>
-                        <li><a href="#">Skills Workshops</a></li>
-                        <li><a href="#">Mentorship Network</a></li>
-                        <li><a href="#">Startup Accelerator</a></li>
+                        <li><a href="https://www.magisfactory.com/" target="_blank" rel="noopener noreferrer">Magis Factory</a></li>
+                        <li><a href="https://www.connectsworkspace.com/golden-startup-coffee" target="_blank" rel="noopener noreferrer">Golden Startup Coffee</a></li>
+                        <li><a href="https://www.colorado.edu/innovate/colorado-sustainability-challenge" target="_blank" rel="noopener noreferrer">Colorado Sustainability Challenge</a></li>
+                        <li><a href="https://www.regis.edu/" target="_blank" rel="noopener noreferrer">Regis University</a></li>
+                        <li><a href="https://www.regis.edu/academics/colleges-and-schools/anderson/" target="_blank" rel="noopener noreferrer">Anderson College of Business and Computing</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h4>Connect</h4>
                     <div class="social-links">
-                        <a href="#" class="social-link">LinkedIn</a>
-                        <a href="#" class="social-link">Twitter</a>
-                        <a href="#" class="social-link">Facebook</a>
-                        <a href="#" class="social-link">Instagram</a>
+                        <a href="https://www.linkedin.com/search/results/all/?fetchDeterministicClustersOnly=true&heroEntityKey=urn%3Ali%3Aorganization%3A27004267&keywords=regis%20university%20innovation%20challenge&origin=RICH_QUERY_TYPEAHEAD_HISTORY&position=0&sid=V-C" target="_blank" rel="noopener noreferrer" class="social-link">LinkedIn</a>
+                        <a href="https://x.com/RegisInnovation" target="_blank" rel="noopener noreferrer" class="social-link">Twitter</a>
+                        <a href="https://www.facebook.com/regisinnovation/" target="_blank" rel="noopener noreferrer" class="social-link">Facebook</a>
+                        <a href="https://www.instagram.com/regisinnovation/" target="_blank" rel="noopener noreferrer" class="social-link">Instagram</a>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Regis Innovation Center. All rights reserved.</p>
+                <p>&copy; 2026 Regis Innovation Center. All rights reserved.</p>
             </div>
         </div>
     </footer>

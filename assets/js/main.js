@@ -1,4 +1,50 @@
-// Main JavaScript for Regis Innovation Center We    // Wait 2 seconds before starting rotation for better UX
+// Main JavaScript for Regis Innovation Center
+
+// ====== Dropdown Menu Accessibility & Mobile Support ======
+function initDropdownMenu() {
+    const dropdownItems = document.querySelectorAll('.nav-item.has-dropdown');
+    
+    dropdownItems.forEach(item => {
+        const link = item.querySelector('.nav-link');
+        const menu = item.querySelector('.dropdown-menu');
+        
+        if (!link || !menu) return;
+        
+        // Handle keyboard navigation
+        link.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                item.classList.toggle('dropdown-open');
+            }
+            if (e.key === 'Escape') {
+                item.classList.remove('dropdown-open');
+            }
+        });
+        
+        // Handle click for mobile/touch devices
+        if ('ontouchstart' in window) {
+            link.addEventListener('click', (e) => {
+                if (!item.classList.contains('dropdown-open')) {
+                    e.preventDefault();
+                    // Close other dropdowns
+                    dropdownItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('dropdown-open');
+                        }
+                    });
+                    item.classList.add('dropdown-open');
+                }
+            });
+            
+            // Close dropdown when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!item.contains(e.target)) {
+                    item.classList.remove('dropdown-open');
+                }
+            });
+        }
+    });
+}
 
 // ====== Video Autoplay on Scroll ======
 function initVideoAutoplay() {
@@ -207,41 +253,70 @@ document.addEventListener('DOMContentLoaded', function() {
     initVideoAutoplay(); // Add video autoplay initialization
     initMetricsCountUp(); // Add beautiful metrics count-up animation
     initWinnersAnimations(); // Add winners section animations
+    initEventsCarousel(); // Add events carousel navigation
+    initDropdownMenu(); // Add dropdown menu functionality
 });
 
 // ====== Elegant Image Showcase ======
 function initElegantShowcase() {
     const images = document.querySelectorAll('.showcase-image');
+    const prevBtn = document.querySelector('.showcase-arrow-prev');
+    const nextBtn = document.querySelector('.showcase-arrow-next');
     let currentIndex = 0;
-    const transitionDuration = 7000; // 7 seconds between transitions - slower pace
+    const transitionDuration = 7000; // 7 seconds between transitions
+    let autoRotateInterval;
     
     if (images.length === 0) return;
     
-    function showNextImage() {
-        // Remove active class from current image with fade-out effect
-        const currentImage = images[currentIndex];
-        currentImage.classList.remove('active');
-        currentImage.classList.add('fade-out');
+    function showImage(index) {
+        // Remove active class from all images
+        images.forEach(img => {
+            img.classList.remove('active', 'fade-out', 'fade-in');
+        });
         
-        // Move to next image
-        currentIndex = (currentIndex + 1) % images.length;
-        const nextImage = images[currentIndex];
+        // Show the selected image
+        const targetImage = images[index];
+        targetImage.classList.add('fade-in', 'active');
         
-        // Smooth transition with perfect timing
+        // Clean up transition classes after animation completes
         setTimeout(() => {
-            currentImage.classList.remove('fade-out');
-            nextImage.classList.add('fade-in', 'active');
-            
-            // Clean up transition classes after animation completes
-            setTimeout(() => {
-                nextImage.classList.remove('fade-in');
-            }, 1500);
-        }, 200);
+            targetImage.classList.remove('fade-in');
+        }, 1500);
+    }
+    
+    function showNextImage() {
+        currentIndex = (currentIndex + 1) % images.length;
+        showImage(currentIndex);
+    }
+    
+    function showPrevImage() {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        showImage(currentIndex);
+    }
+    
+    function resetAutoRotate() {
+        clearInterval(autoRotateInterval);
+        autoRotateInterval = setInterval(showNextImage, transitionDuration);
+    }
+    
+    // Navigation button event listeners
+    if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+            showNextImage();
+            resetAutoRotate();
+        });
+    }
+    
+    if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+            showPrevImage();
+            resetAutoRotate();
+        });
     }
     
     // Start the image rotation after initial page load
     setTimeout(() => {
-        setInterval(showNextImage, transitionDuration);
+        autoRotateInterval = setInterval(showNextImage, transitionDuration);
     }, 2000); // Wait 2 seconds before starting rotation for better UX
 }
 
@@ -871,6 +946,107 @@ function initLazyLoading() {
     });
     
     images.forEach(img => imageObserver.observe(img));
+}
+
+// ====== Events Carousel Navigation ======
+function initEventsCarousel() {
+    const carousel = document.getElementById('eventsCarousel');
+    const leftArrow = document.getElementById('eventsArrowLeft');
+    const rightArrow = document.getElementById('eventsArrowRight');
+    
+    if (!carousel || !leftArrow || !rightArrow) return;
+    
+    const cards = carousel.querySelectorAll('.harvard-event-card');
+    if (cards.length === 0) return;
+    
+    // Scroll to the 7th event (index 6 - Team Meet & Greet, the first current event)
+    const scrollToIndex = 6;
+    const cardWidth = cards[0].offsetWidth;
+    const gap = 40;
+    const scrollAmount = (cardWidth + gap) * scrollToIndex;
+    
+    // Set initial scroll position after a short delay to ensure layout is complete
+    setTimeout(() => {
+        carousel.scrollLeft = scrollAmount;
+        updateArrowStates();
+    }, 100);
+    
+    // Function to scroll the carousel by 3 cards (or 1 card on mobile)
+    function scrollCarousel(direction) {
+        const cardWidth = cards[0].offsetWidth;
+        const gap = window.innerWidth <= 768 ? 35 : 40; // matches CSS gap
+        const cardsToScroll = window.innerWidth <= 768 ? 1 : 3; // Scroll 1 card on mobile, 3 on desktop
+        const scrollAmount = (cardWidth + gap) * cardsToScroll;
+        const currentScroll = carousel.scrollLeft;
+        
+        if (direction === 'left') {
+            carousel.scrollLeft = currentScroll - scrollAmount;
+        } else {
+            carousel.scrollLeft = currentScroll + scrollAmount;
+        }
+    }
+    
+    // Function to update arrow states
+    function updateArrowStates() {
+        const maxScroll = carousel.scrollWidth - carousel.clientWidth;
+        
+        // Disable left arrow if at start
+        if (carousel.scrollLeft <= 0) {
+            leftArrow.disabled = true;
+        } else {
+            leftArrow.disabled = false;
+        }
+        
+        // Disable right arrow if at end
+        if (carousel.scrollLeft >= maxScroll - 1) {
+            rightArrow.disabled = true;
+        } else {
+            rightArrow.disabled = false;
+        }
+    }
+    
+    // Touch support for mobile swipe
+    let touchStartX = 0;
+    let touchEndX = 0;
+    let touchStartTime = 0;
+    
+    carousel.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+        touchStartTime = Date.now();
+    }, { passive: true });
+    
+    carousel.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+    }, { passive: true });
+    
+    function handleSwipe() {
+        const swipeThreshold = 50;
+        const swipeTime = Date.now() - touchStartTime;
+        const swipeDistance = touchEndX - touchStartX;
+        
+        // Only trigger swipe if it was fast enough (under 300ms) or long enough (over threshold)
+        if (swipeTime < 300 || Math.abs(swipeDistance) > swipeThreshold) {
+            if (swipeDistance > swipeThreshold) {
+                scrollCarousel('left');
+            } else if (swipeDistance < -swipeThreshold) {
+                scrollCarousel('right');
+            }
+        }
+    }
+    
+    // Event listeners
+    leftArrow.addEventListener('click', () => scrollCarousel('left'));
+    rightArrow.addEventListener('click', () => scrollCarousel('right'));
+    carousel.addEventListener('scroll', updateArrowStates);
+    
+    // Update arrow states on window resize
+    window.addEventListener('resize', () => {
+        updateArrowStates();
+    });
+    
+    // Initial state
+    updateArrowStates();
 }
 
 // Export functions for external use

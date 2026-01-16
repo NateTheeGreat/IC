@@ -13,16 +13,6 @@
 <body>
     <!-- Ultra-Premium Header Start -->
     <header class="premium-header">
-        <!-- Elegant Announcement Bar -->
-        <div class="announcement-strip">
-            <div class="announcement-content">
-                <div class="announcement-pulse"></div>
-                <span class="announcement-label">Open House - Night 1</span>
-                <span class="announcement-text">3rd Floor, Clarke Hall, Room 358. Regis University Northwest Denver Campus</span>
-                <button class="announcement-dismiss">✕</button>
-            </div>
-        </div>
-        
         <!-- Main Navigation Header -->
         <nav class="main-navigation" role="navigation">
             <div class="nav-container">
@@ -36,6 +26,12 @@
                 <!-- Navigation Links -->
                 <div class="nav-links-zone">
                     <ul class="nav-menu">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link active" data-text="Home">
+                                <span class="link-text">Home</span>
+                                <span class="link-effect"></span>
+                            </a>
+                        </li>
                         <li class="nav-item">
                             <a href="about.html" class="nav-link" data-text="About">
                                 <span class="link-text">About</span>
@@ -60,6 +56,24 @@
                                 <span class="link-effect"></span>
                             </a>
                         </li>
+                        <li class="nav-item has-dropdown">
+                            <a href="the-challenge.html" class="nav-link" data-text="The Challenge">
+                                <span class="link-text">The Challenge</span>
+                                <span class="link-effect"></span>
+                                <span class="dropdown-arrow">▼</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="the-challenge.html" class="dropdown-link">Overview</a></li>
+                                <li><a href="this-years-businesses.html" class="dropdown-link">This Year's Businesses</a></li>
+                                <li><a href="mentor.html" class="dropdown-link">Mentor with Us</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="https://give.regis.edu/campaigns/21516/donations/new" target="_blank" rel="noopener noreferrer" class="nav-link" data-text="Give">
+                                <span class="link-text">Give</span>
+                                <span class="link-effect"></span>
+                            </a>
+                        </li>
                     </ul>
                     <div class="nav-highlight"></div>
                 </div>
@@ -81,10 +95,13 @@
             <div class="mobile-menu" id="mobileMenu">
                 <div class="mobile-menu-content">
                     <ul class="mobile-nav-list">
+                        <li><a href="index.html" class="mobile-nav-link active">Home</a></li>
                         <li><a href="about.html" class="mobile-nav-link">About</a></li>
                         <li><a href="events.html" class="mobile-nav-link">Events</a></li>
                         <li><a href="ventures.html" class="mobile-nav-link">Ventures</a></li>
-                        <li><a href="ventures.html" class="mobile-nav-link">Ventures</a></li>
+                        <li><a href="stories.html" class="mobile-nav-link">Stories</a></li>
+                        <li><a href="the-challenge.html" class="mobile-nav-link">The Challenge</a></li>
+                        <li><a href="this-years-businesses.html" class="mobile-nav-link">This Year's Businesses</a></li>                        <li><a href="mentor.html" class="mobile-nav-link">Mentor with Us</a></li>                        <li><a href="https://give.regis.edu/campaigns/21516/donations/new" target="_blank" rel="noopener noreferrer" class="mobile-nav-link">Give</a></li>
                     </ul>
                 </div>
             </div>
@@ -113,7 +130,7 @@
                 </div>
                 
                 <div class="hero-action-zone">
-                    <button class="hero-cta-button">
+                    <a href="https://forms.gle/pkfB3ZGbuVr3WY3q6" target="_blank" rel="noopener noreferrer" class="hero-cta-button">
                         <span class="cta-text">Apply Now</span>
                         <div class="cta-arrow">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -121,7 +138,7 @@
                             </svg>
                         </div>
                         <div class="cta-shimmer"></div>
-                    </button>
+                    </a>
                     
                     <a href="about.html" class="hero-secondary-button">
                         <span class="secondary-text">Learn More</span>
@@ -143,11 +160,23 @@
                             <img src="assets/image3.jpg" alt="Innovation Showcase" class="showcase-image" data-image="3">
                             <img src="assets/image4.jpg" alt="Innovation Showcase" class="showcase-image" data-image="4">
                             <img src="assets/image5.png" alt="Innovation Showcase" class="showcase-image" data-image="5">
+                            <img src="assets/ic_team.jpg" alt="Innovation Center Team" class="showcase-image" data-image="6">
                         </div>
                         <div class="image-overlay">
                             <div class="gradient-overlay"></div>
                             <div class="content-label">Innovation Showcase</div>
                         </div>
+                        <!-- Navigation Arrows -->
+                        <button class="showcase-arrow showcase-arrow-prev" aria-label="Previous image">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                        <button class="showcase-arrow showcase-arrow-next" aria-label="Next image">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -195,7 +224,7 @@
                     <!-- Impact Metrics -->
                     <div class="impact-metrics">
                         <div class="metric-item">
-                            <span class="metric-number" data-target="214+">0+</span>
+                            <span class="metric-number" data-target="223+">0+</span>
                             <span class="metric-label">Businesses Launched</span>
                         </div>
                         <div class="metric-item">
@@ -249,14 +278,24 @@
                             <span class="winner-year">Winner 2025</span>
                             <div class="category-tag">HealthTech</div>
                         </div>
-                        <a href="business-details/renewrx-details.html" class="explore-more-btn">
-                            <span class="btn-text">Explore More</span>
-                            <div class="btn-arrow">
-                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-                                    <path d="M3 9H15M15 9L9 3M15 9L9 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                            </div>
-                        </a>
+                        <div class="winner-actions">
+                            <a href="business-details/renewrx-details.html" class="explore-more-btn">
+                                <span class="btn-text">Explore More</span>
+                                <div class="btn-arrow">
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                        <path d="M3 9H15M15 9L9 3M15 9L9 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                            </a>
+                            <a href="https://www.renewrx.health/" target="_blank" rel="noopener noreferrer" class="view-website-btn">
+                                <span class="btn-text">View Website</span>
+                                <div class="btn-arrow">
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                        <path d="M4 14L14 4M14 4H4M14 4V14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                            </a>
+                        </div>
                     </div>
                 </div>
 
@@ -273,14 +312,24 @@
                             <span class="winner-year">Winner 2024</span>
                             <div class="category-tag">Food & Beverage</div>
                         </div>
-                        <a href="business-details/bring-coffee-details.html" class="explore-more-btn">
-                            <span class="btn-text">Explore More</span>
-                            <div class="btn-arrow">
-                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-                                    <path d="M3 9H15M15 9L9 3M15 9L9 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                            </div>
-                        </a>
+                        <div class="winner-actions">
+                            <a href="business-details/bring-coffee-details.html" class="explore-more-btn">
+                                <span class="btn-text">Explore More</span>
+                                <div class="btn-arrow">
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                        <path d="M3 9H15M15 9L9 3M15 9L9 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                            </a>
+                            <a href="https://www.instagram.com/bringcoffeeco/?hl=en" target="_blank" rel="noopener noreferrer" class="view-website-btn">
+                                <span class="btn-text">View Instagram</span>
+                                <div class="btn-arrow">
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                        <path d="M4 14L14 4M14 4H4M14 4V14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                            </a>
+                        </div>
                     </div>
                 </div>
 
@@ -297,14 +346,24 @@
                             <span class="winner-year">Winner 2023</span>
                             <div class="category-tag">Energy</div>
                         </div>
-                        <a href="business-details/tap-energy-details.html" class="explore-more-btn">
-                            <span class="btn-text">Explore More</span>
-                            <div class="btn-arrow">
-                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-                                    <path d="M3 9H15M15 9L9 3M15 9L9 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                            </div>
-                        </a>
+                        <div class="winner-actions">
+                            <a href="business-details/tap-energy-details.html" class="explore-more-btn">
+                                <span class="btn-text">Explore More</span>
+                                <div class="btn-arrow">
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                        <path d="M3 9H15M15 9L9 3M15 9L9 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                            </a>
+                            <a href="https://www.tapenergy.eco/" target="_blank" rel="noopener noreferrer" class="view-website-btn">
+                                <span class="btn-text">View Website</span>
+                                <div class="btn-arrow">
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                        <path d="M4 14L14 4M14 4H4M14 4V14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -320,58 +379,228 @@
                 <a href="events.html" class="harvard-browse-link">Browse All Events</a>
             </div>
 
-            <!-- Events Grid -->
-            <div class="harvard-events-grid">
-                <!-- Event 1 -->
-                <a href="events/team-meet-greet.html" class="harvard-event-card" style="text-decoration: none; color: inherit;">
-                    <div class="harvard-event-date">
-                        <span class="harvard-event-day">Fri, Jan 24</span>
-                    </div>
-                    <div class="harvard-event-content">
-                        <h3 class="harvard-event-title">Team Meet & Greet</h3>
-                        <div class="harvard-event-details">
-                            <span class="harvard-event-venue">Innovation Center</span>
-                            <span class="harvard-event-time">10:30 AM-12:00 PM</span>
-                        </div>
-                    </div>
-                    <div class="harvard-event-image">
-                        <img src="assets/events/meet&greet.JPG" alt="Team Meet & Greet" class="event-square-image">
-                    </div>
-                </a>
+            <!-- Events Carousel Container -->
+            <div class="events-carousel-wrapper">
+                <!-- Left Arrow -->
+                <button class="carousel-arrow carousel-arrow-left" id="eventsArrowLeft" aria-label="Previous events">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
 
-                <!-- Event 2 -->
-                <a href="events/first-mentor-saturday.html" class="harvard-event-card" style="text-decoration: none; color: inherit;">
-                    <div class="harvard-event-date">
-                        <span class="harvard-event-day">Sat, Feb 7</span>
-                    </div>
-                    <div class="harvard-event-content">
-                        <h3 class="harvard-event-title">First Mentor Saturday</h3>
-                        <div class="harvard-event-details">
-                            <span class="harvard-event-venue">Innovation Center</span>
-                            <span class="harvard-event-time">9:00 AM-3:00 PM</span>
+                <!-- Events Grid -->
+                <div class="harvard-events-grid" id="eventsCarousel">
+                    <!-- Past Event 1: Open House - Night 1 -->
+                    <a href="events/open-house-night-1.html" class="harvard-event-card" style="text-decoration: none; color: inherit;">
+                        <div class="harvard-event-date">
+                            <span class="harvard-event-day">Tue, Oct 8</span>
                         </div>
-                    </div>
-                    <div class="harvard-event-image">
-                        <img src="assets/events/First_Mentor.JPG" alt="First Mentor Saturday" class="event-square-image">
-                    </div>
-                </a>
+                        <div class="harvard-event-content">
+                            <h3 class="harvard-event-title">Open House - Night 1</h3>
+                            <div class="harvard-event-details">
+                                <span class="harvard-event-venue">Regis University</span>
+                                <span class="harvard-event-time">6:00 PM-8:00 PM</span>
+                            </div>
+                        </div>
+                        <div class="harvard-event-image">
+                            <img src="assets/events/openhouse1.jpg" alt="Open House Night 1" class="event-square-image">
+                        </div>
+                    </a>
 
-                <!-- Event 3 -->
-                <a href="events/second-mentor-saturday.html" class="harvard-event-card" style="text-decoration: none; color: inherit;">
-                    <div class="harvard-event-date">
-                        <span class="harvard-event-day">Sat, Mar 7</span>
-                    </div>
-                    <div class="harvard-event-content">
-                        <h3 class="harvard-event-title">Second Mentor Saturday</h3>
-                        <div class="harvard-event-details">
-                            <span class="harvard-event-venue">Regis University</span>
-                            <span class="harvard-event-time">9:00 AM-10:00 AM</span>
+                    <!-- Past Event 2: Open House - Night 2 -->
+                    <a href="events/open-house-night-2.html" class="harvard-event-card" style="text-decoration: none; color: inherit;">
+                        <div class="harvard-event-date">
+                            <span class="harvard-event-day">Wed, Oct 16</span>
                         </div>
-                    </div>
-                    <div class="harvard-event-image">
-                        <img src="assets/events/Second_Mentor.JPG" alt="Second Mentor Saturday" class="event-square-image">
-                    </div>
-                </a>
+                        <div class="harvard-event-content">
+                            <h3 class="harvard-event-title">Open House - Night 2</h3>
+                            <div class="harvard-event-details">
+                                <span class="harvard-event-venue">Regis University</span>
+                                <span class="harvard-event-time">6:00 PM-8:00 PM</span>
+                            </div>
+                        </div>
+                        <div class="harvard-event-image">
+                            <img src="assets/events/openhouse2.jpg" alt="Open House Night 2" class="event-square-image">
+                        </div>
+                    </a>
+
+                    <!-- Past Event 3: Kick-Off Event -->
+                    <a href="events/kick-off-event.html" class="harvard-event-card" style="text-decoration: none; color: inherit;">
+                        <div class="harvard-event-date">
+                            <span class="harvard-event-day">Tue, Oct 22</span>
+                        </div>
+                        <div class="harvard-event-content">
+                            <h3 class="harvard-event-title">Kick-Off Event</h3>
+                            <div class="harvard-event-details">
+                                <span class="harvard-event-venue">Regis University</span>
+                                <span class="harvard-event-time">6:00 PM-8:00 PM</span>
+                            </div>
+                        </div>
+                        <div class="harvard-event-image">
+                            <img src="assets/events/Kickoff.JPG" alt="Kick-Off Event" class="event-square-image">
+                        </div>
+                    </a>
+
+                    <!-- Past Event 4: Deadline to Sign Up -->
+                    <a href="events/deadline.html" class="harvard-event-card" style="text-decoration: none; color: inherit;">
+                        <div class="harvard-event-date">
+                            <span class="harvard-event-day">Wed, Nov 13</span>
+                        </div>
+                        <div class="harvard-event-content">
+                            <h3 class="harvard-event-title">Deadline to Sign Up</h3>
+                            <div class="harvard-event-details">
+                                <span class="harvard-event-venue">Online Registration</span>
+                                <span class="harvard-event-time">12:00 AM-11:59 PM</span>
+                            </div>
+                        </div>
+                        <div class="harvard-event-image">
+                            <img src="assets/events/deadline.jpg" alt="Deadline to Sign Up" class="event-square-image">
+                        </div>
+                    </a>
+
+                    <!-- Past Event 5: Qualifying Pitches - Night 1 -->
+                    <a href="events/qualifying-pitches-night-1.html" class="harvard-event-card" style="text-decoration: none; color: inherit;">
+                        <div class="harvard-event-date">
+                            <span class="harvard-event-day">Tue, Nov 19</span>
+                        </div>
+                        <div class="harvard-event-content">
+                            <h3 class="harvard-event-title">Qualifying Pitches - Night 1</h3>
+                            <div class="harvard-event-details">
+                                <span class="harvard-event-venue">Regis University</span>
+                                <span class="harvard-event-time">6:00 PM-9:00 PM</span>
+                            </div>
+                        </div>
+                        <div class="harvard-event-image">
+                            <img src="assets/events/Qualifying_Pitches_1.JPG" alt="Qualifying Pitches Night 1" class="event-square-image">
+                        </div>
+                    </a>
+
+                    <!-- Past Event 6: Qualifying Pitches - Night 2 -->
+                    <a href="events/qualifying-pitches-night-2.html" class="harvard-event-card" style="text-decoration: none; color: inherit;">
+                        <div class="harvard-event-date">
+                            <span class="harvard-event-day">Wed, Nov 20</span>
+                        </div>
+                        <div class="harvard-event-content">
+                            <h3 class="harvard-event-title">Qualifying Pitches - Night 2</h3>
+                            <div class="harvard-event-details">
+                                <span class="harvard-event-venue">Regis University</span>
+                                <span class="harvard-event-time">6:00 PM-9:00 PM</span>
+                            </div>
+                        </div>
+                        <div class="harvard-event-image">
+                            <img src="assets/events/qualifypitches2.JPG" alt="Qualifying Pitches Night 2" class="event-square-image">
+                        </div>
+                    </a>
+
+                    <!-- CURRENT Event 1: Team Meet & Greet (Most Recent Upcoming) -->
+                    <a href="events/team-meet-greet.html" class="harvard-event-card" style="text-decoration: none; color: inherit;">
+                        <div class="harvard-event-date">
+                            <span class="harvard-event-day">Sat, Jan 24</span>
+                        </div>
+                        <div class="harvard-event-content">
+                            <h3 class="harvard-event-title">Team Meet & Greet</h3>
+                            <div class="harvard-event-details">
+                                <span class="harvard-event-venue">Innovation Center</span>
+                                <span class="harvard-event-time">10:30 AM-12:00 PM</span>
+                            </div>
+                        </div>
+                        <div class="harvard-event-image">
+                            <img src="assets/events/meet&greet.JPG" alt="Team Meet & Greet" class="event-square-image">
+                        </div>
+                    </a>
+
+                    <!-- CURRENT Event 2: First Mentor Saturday -->
+                    <a href="events/first-mentor-saturday.html" class="harvard-event-card" style="text-decoration: none; color: inherit;">
+                        <div class="harvard-event-date">
+                            <span class="harvard-event-day">Sat, Feb 7</span>
+                        </div>
+                        <div class="harvard-event-content">
+                            <h3 class="harvard-event-title">First Mentor Saturday</h3>
+                            <div class="harvard-event-details">
+                                <span class="harvard-event-venue">Innovation Center</span>
+                                <span class="harvard-event-time">9:00 AM-3:00 PM</span>
+                            </div>
+                        </div>
+                        <div class="harvard-event-image">
+                            <img src="assets/events/First_Mentor.JPG" alt="First Mentor Saturday" class="event-square-image">
+                        </div>
+                    </a>
+
+                    <!-- CURRENT Event 3: Second Mentor Saturday -->
+                    <a href="events/second-mentor-saturday.html" class="harvard-event-card" style="text-decoration: none; color: inherit;">
+                        <div class="harvard-event-date">
+                            <span class="harvard-event-day">Sat, Mar 7</span>
+                        </div>
+                        <div class="harvard-event-content">
+                            <h3 class="harvard-event-title">Second Mentor Saturday</h3>
+                            <div class="harvard-event-details">
+                                <span class="harvard-event-venue">Regis University</span>
+                                <span class="harvard-event-time">9:00 AM-10:00 AM</span>
+                            </div>
+                        </div>
+                        <div class="harvard-event-image">
+                            <img src="assets/events/Second_Mentor.JPG" alt="Second Mentor Saturday" class="event-square-image">
+                        </div>
+                    </a>
+
+                    <!-- Future Event 1: Semifinal Pitch Round -->
+                    <a href="events/semifinal-pitch-round.html" class="harvard-event-card" style="text-decoration: none; color: inherit;">
+                        <div class="harvard-event-date">
+                            <span class="harvard-event-day">Tue, Mar 11</span>
+                        </div>
+                        <div class="harvard-event-content">
+                            <h3 class="harvard-event-title">Semifinal Pitch Round</h3>
+                            <div class="harvard-event-details">
+                                <span class="harvard-event-venue">Innovation Center</span>
+                                <span class="harvard-event-time">6:00 PM-9:00 PM</span>
+                            </div>
+                        </div>
+                        <div class="harvard-event-image">
+                            <img src="assets/events/semifinals.jpg" alt="Semifinal Pitch Round" class="event-square-image">
+                        </div>
+                    </a>
+
+                    <!-- Future Event 2: Third Mentor Saturday -->
+                    <a href="events/third-mentor-saturday.html" class="harvard-event-card" style="text-decoration: none; color: inherit;">
+                        <div class="harvard-event-date">
+                            <span class="harvard-event-day">Sat, Mar 28</span>
+                        </div>
+                        <div class="harvard-event-content">
+                            <h3 class="harvard-event-title">Third Mentor Saturday</h3>
+                            <div class="harvard-event-details">
+                                <span class="harvard-event-venue">Innovation Center</span>
+                                <span class="harvard-event-time">9:00 AM-3:00 PM</span>
+                            </div>
+                        </div>
+                        <div class="harvard-event-image">
+                            <img src="assets/events/Third_Mentor.JPG" alt="Third Mentor Saturday" class="event-square-image">
+                        </div>
+                    </a>
+
+                    <!-- Future Event 3: Finals -->
+                    <a href="events/finals.html" class="harvard-event-card" style="text-decoration: none; color: inherit;">
+                        <div class="harvard-event-date">
+                            <span class="harvard-event-day">Thu, Apr 17</span>
+                        </div>
+                        <div class="harvard-event-content">
+                            <h3 class="harvard-event-title">Innovation Challenge Finals</h3>
+                            <div class="harvard-event-details">
+                                <span class="harvard-event-venue">Regis University</span>
+                                <span class="harvard-event-time">6:00 PM-8:00 PM</span>
+                            </div>
+                        </div>
+                        <div class="harvard-event-image">
+                            <img src="assets/events/finals.jpg" alt="Innovation Challenge Finals" class="event-square-image">
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Right Arrow -->
+                <button class="carousel-arrow carousel-arrow-right" id="eventsArrowRight" aria-label="Next events">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
             </div>
         </div>
     </section>
@@ -381,38 +610,42 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <img src="assets/images/regis-logo-white.png" alt="Regis Innovation Center" class="footer-logo">
+                    <img src="assets/logo.png" alt="Regis Innovation Center" class="footer-logo">
                     <p>Fostering innovation and entrepreneurship in the heart of Denver</p>
                 </div>
                 <div class="footer-section">
                     <h4>Quick Links</h4>
                     <ul>
+                        <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About</a></li>
-                        <li><a href="#programs">Programs</a></li>
                         <li><a href="events.html">Events</a></li>
+                        <li><a href="ventures.html">Ventures</a></li>
+                        <li><a href="stories.html">Stories</a></li>
+                        <li><a href="the-challenge.html">The Challenge</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h4>Programs</h4>
                     <ul>
-                        <li><a href="#">Innovation Incubator</a></li>
-                        <li><a href="#">Skills Workshops</a></li>
-                        <li><a href="#">Mentorship Network</a></li>
-                        <li><a href="#">Startup Accelerator</a></li>
+                        <li><a href="https://www.magisfactory.com/" target="_blank" rel="noopener noreferrer">Magis Factory</a></li>
+                        <li><a href="https://www.connectsworkspace.com/golden-startup-coffee" target="_blank" rel="noopener noreferrer">Golden Startup Coffee</a></li>
+                        <li><a href="https://www.colorado.edu/innovate/colorado-sustainability-challenge" target="_blank" rel="noopener noreferrer">Colorado Sustainability Challenge</a></li>
+                        <li><a href="https://www.regis.edu/" target="_blank" rel="noopener noreferrer">Regis University</a></li>
+                        <li><a href="https://www.regis.edu/academics/colleges-and-schools/anderson/" target="_blank" rel="noopener noreferrer">Anderson College of Business and Computing</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h4>Connect</h4>
                     <div class="social-links">
-                        <a href="#" class="social-link">LinkedIn</a>
-                        <a href="#" class="social-link">Twitter</a>
-                        <a href="#" class="social-link">Facebook</a>
-                        <a href="#" class="social-link">Instagram</a>
+                        <a href="https://www.linkedin.com/search/results/all/?fetchDeterministicClustersOnly=true&heroEntityKey=urn%3Ali%3Aorganization%3A27004267&keywords=regis%20university%20innovation%20challenge&origin=RICH_QUERY_TYPEAHEAD_HISTORY&position=0&sid=V-C" target="_blank" rel="noopener noreferrer" class="social-link">LinkedIn</a>
+                        <a href="https://x.com/RegisInnovation" target="_blank" rel="noopener noreferrer" class="social-link">Twitter</a>
+                        <a href="https://www.facebook.com/regisinnovation/" target="_blank" rel="noopener noreferrer" class="social-link">Facebook</a>
+                        <a href="https://www.instagram.com/regisinnovation/" target="_blank" rel="noopener noreferrer" class="social-link">Instagram</a>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Regis Innovation Center. All rights reserved.</p>
+                <p>&copy; 2026 Regis Innovation Center. All rights reserved.</p>
             </div>
         </div>
     </footer>

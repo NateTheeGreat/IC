@@ -13,27 +13,18 @@
     
     <!-- Styles -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/components.css">
     <link rel="stylesheet" href="assets/css/stories.css">
 </head>
 <body>
     <!-- Ultra-Premium Header Start -->
     <header class="premium-header">
-        <!-- Elegant Announcement Bar -->
-        <div class="announcement-strip">
-            <div class="announcement-content">
-                <div class="announcement-pulse"></div>
-                <span class="announcement-label">Open House - Night 1</span>
-                <span class="announcement-text">3rd Floor, Clarke Hall, Room 358. Regis University Northwest Denver Campus</span>
-                <button class="announcement-dismiss">✕</button>
-            </div>
-        </div>
-        
         <!-- Main Navigation Header -->
         <nav class="main-navigation" role="navigation">
             <div class="nav-container">
                 <!-- Brand Section -->
                 <div class="brand-zone">
-                    <a href="index.html" class="brand-link">
+                    <a href="#home" class="brand-link">
                         <img src="assets/logo.png" alt="Regis Innovation Center" class="official-logo">
                     </a>
                 </div>
@@ -42,7 +33,13 @@
                 <div class="nav-links-zone">
                     <ul class="nav-menu">
                         <li class="nav-item">
-                                                    <a href="about.html" class="nav-link" data-text="About">
+                            <a href="index.html" class="nav-link" data-text="Home">
+                                <span class="link-text">Home</span>
+                                <span class="link-effect"></span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="about.html" class="nav-link" data-text="About">
                                 <span class="link-text">About</span>
                                 <span class="link-effect"></span>
                             </a>
@@ -59,9 +56,27 @@
                                 <span class="link-effect"></span>
                             </a>
                         </li>
-                        <li class="nav-item nav-active">
-                            <a href="stories.html" class="nav-link" data-text="Stories">
+                        <li class="nav-item">
+                            <a href="stories.html" class="nav-link active" data-text="Stories">
                                 <span class="link-text">Stories</span>
+                                <span class="link-effect"></span>
+                            </a>
+                        </li>
+                        <li class="nav-item has-dropdown">
+                            <a href="the-challenge.html" class="nav-link" data-text="The Challenge">
+                                <span class="link-text">The Challenge</span>
+                                <span class="link-effect"></span>
+                                <span class="dropdown-arrow">▼</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="the-challenge.html" class="dropdown-link">Overview</a></li>
+                                <li><a href="this-years-businesses.html" class="dropdown-link">This Year's Businesses</a></li>
+                                <li><a href="mentor.html" class="dropdown-link">Mentor with Us</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="https://give.regis.edu/campaigns/21516/donations/new" target="_blank" rel="noopener noreferrer" class="nav-link" data-text="Give">
+                                <span class="link-text">Give</span>
                                 <span class="link-effect"></span>
                             </a>
                         </li>
@@ -86,11 +101,15 @@
             <div class="mobile-menu" id="mobileMenu">
                 <div class="mobile-menu-content">
                     <ul class="mobile-nav-list">
-                                                <li><a href="about.html" class="mobile-nav-link">About</a></li>
+                        <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+                        <li><a href="about.html" class="mobile-nav-link">About</a></li>
                         <li><a href="events.html" class="mobile-nav-link">Events</a></li>
                         <li><a href="ventures.html" class="mobile-nav-link">Ventures</a></li>
                         <li><a href="stories.html" class="mobile-nav-link active">Stories</a></li>
-                        <li><a href="index.html#login" class="mobile-nav-link special">Member Login</a></li>
+                        <li><a href="the-challenge.html" class="mobile-nav-link">The Challenge</a></li>
+                        <li><a href="this-years-businesses.html" class="mobile-nav-link">This Year's Businesses</a></li>
+                        <li><a href="mentor.html" class="mobile-nav-link">Mentor with Us</a></li>
+                        <li><a href="https://give.regis.edu/campaigns/21516/donations/new" target="_blank" rel="noopener noreferrer" class="mobile-nav-link">Give</a></li>
                     </ul>
                 </div>
             </div>
@@ -186,7 +205,7 @@
             <!-- Section 5 -->
             <div class="section section-top">
                 <div class="image-container">
-                    <img src="assets/stories/oldmedows.png" alt="Old Medows Community" />
+                    <img src="assets/stories/oldmedows.png" alt="Autumn Meadows Community" />
                     <div class="video-overlay">
                         <div class="play-button">&#9658;</div>
                         <span>See community impact</span>
@@ -194,8 +213,8 @@
                 </div>
                 <div class="text-container">
                     <h1>How do you find a nursing home sensitive to your culture?</h1>
-                    <p>Old Medows is a culturally sensitive nursing home that aims to solve the one problem many people face when they grow old: finding a nursing home that is sensitive to their culture. This Innovation Center startup is creating a compassionate approach to elder care that honors diverse backgrounds.</p>
-                    <a href="stories-details/old-medows.html" class="learn-btn">Explore Old Medows →</a>
+                    <p>Autumn Meadows is a culturally sensitive nursing home that aims to solve the one problem many people face when they grow old: finding a nursing home that is sensitive to their culture. This Innovation Center startup is creating a compassionate approach to elder care that honors diverse backgrounds.</p>
+                    <a href="stories-details/old-medows.html" class="learn-btn">Explore Autumn Meadows →</a>
                 </div>
             </div>
 
@@ -224,17 +243,22 @@
                 <div class="footer-section">
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="index.html#about">About</a></li>
-                        <li><a href="index.html#programs">Programs</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="ventures.html">Ventures</a></li>
                         <li><a href="stories.html">Stories</a></li>
+                        <li><a href="the-challenge.html">The Challenge</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h4>Programs</h4>
                     <ul>
-                        <li><a href="ventures.html">Ventures</a></li>
-                        <li><a href="index.html#programs">Innovation Labs</a></li>
-                        <li><a href="index.html#programs">Accelerator</a></li>
+                        <li><a href="https://www.magisfactory.com/" target="_blank" rel="noopener noreferrer">Magis Factory</a></li>
+                        <li><a href="https://www.connectsworkspace.com/golden-startup-coffee" target="_blank" rel="noopener noreferrer">Golden Startup Coffee</a></li>
+                        <li><a href="https://www.colorado.edu/innovate/colorado-sustainability-challenge" target="_blank" rel="noopener noreferrer">Colorado Sustainability Challenge</a></li>
+                        <li><a href="https://www.regis.edu/" target="_blank" rel="noopener noreferrer">Regis University</a></li>
+                        <li><a href="https://www.regis.edu/academics/colleges-and-schools/anderson/" target="_blank" rel="noopener noreferrer">Anderson College of Business and Computing</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
@@ -248,7 +272,7 @@
             </div>
             <div class="footer-bottom">
                 <div class="footer-copyright">
-                    <p>&copy; 2025 Regis Innovation Center. All rights reserved.</p>
+                    <p>&copy; 2026 Regis Innovation Center. All rights reserved.</p>
                 </div>
                 <div class="footer-social">
                     <a href="#" class="social-link">LinkedIn</a>

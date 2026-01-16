@@ -452,7 +452,6 @@ function showCalendarOptions(eventCard) {
         <h3 style="margin-top: 0; margin-bottom: 20px; color: #1a365d;">Add to Calendar</h3>
         <div style="display: flex; flex-direction: column; gap: 10px;">
             <button onclick="window.addToGoogleCalendarFromCard(this)" style="padding: 12px 20px; background: #4285f4; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;">Google Calendar</button>
-            <button onclick="window.addToOutlookCalendarFromCard(this)" style="padding: 12px 20px; background: #0078d4; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;">Outlook Calendar</button>
             <button onclick="window.downloadICSFromCard(this)" style="padding: 12px 20px; background: #6c757d; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;">Download ICS File</button>
             <button onclick="window.closeCalendarModal()" style="padding: 12px 20px; background: white; color: #333; border: 1px solid #ddd; border-radius: 5px; cursor: pointer; font-size: 16px; margin-top: 10px;">Cancel</button>
         </div>
@@ -540,23 +539,7 @@ window.addToGoogleCalendarFromCard = function(btn) {
     window.closeCalendarModal();
 };
 
-window.addToOutlookCalendarFromCard = function(btn) {
-    const modal = document.getElementById('calendarModal');
-    const cardSelector = modal.dataset.eventCard;
-    const card = document.querySelector(cardSelector);
-    if (!card) return;
-    
-    const event = getEventDetailsFromCard(card);
-    const { startDate, endDate } = parseEventDateTimeFromCard(event.monthText, event.dayText, event.timeText);
-    
-    const startFormatted = startDate.toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z';
-    const endFormatted = endDate.toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z';
-    
-    const outlookUrl = `https://outlook.live.com/calendar/0/deeplink/compose?subject=${encodeURIComponent(event.title)}&startdt=${startFormatted}&enddt=${endFormatted}&body=${encodeURIComponent(event.description)}&location=${encodeURIComponent(event.location)}`;
-    
-    window.open(outlookUrl, '_blank');
-    window.closeCalendarModal();
-};
+
 
 window.downloadICSFromCard = function(btn) {
     const modal = document.getElementById('calendarModal');

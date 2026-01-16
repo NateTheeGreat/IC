@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ventures - Regis Innovation Center</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/components.css">
     <link rel="stylesheet" href="assets/css/ventures.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,22 +14,12 @@
 <body>
     <!-- Ultra-Premium Header Start -->
     <header class="premium-header">
-        <!-- Elegant Announcement Bar -->
-        <div class="announcement-strip">
-            <div class="announcement-content">
-                <div class="announcement-pulse"></div>
-                <span class="announcement-label">Open House - Night 1</span>
-                <span class="announcement-text">3rd Floor, Clarke Hall, Room 358. Regis University Northwest Denver Campus</span>
-                <button class="announcement-dismiss">✕</button>
-            </div>
-        </div>
-        
         <!-- Main Navigation Header -->
         <nav class="main-navigation" role="navigation">
             <div class="nav-container">
                 <!-- Brand Section -->
                 <div class="brand-zone">
-                    <a href="index.html" class="brand-link">
+                    <a href="#home" class="brand-link">
                         <img src="assets/logo.png" alt="Regis Innovation Center" class="official-logo">
                     </a>
                 </div>
@@ -37,7 +28,13 @@
                 <div class="nav-links-zone">
                     <ul class="nav-menu">
                         <li class="nav-item">
-                            <a href="index.html#about" class="nav-link" data-text="About">
+                            <a href="index.html" class="nav-link" data-text="Home">
+                                <span class="link-text">Home</span>
+                                <span class="link-effect"></span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="about.html" class="nav-link" data-text="About">
                                 <span class="link-text">About</span>
                                 <span class="link-effect"></span>
                             </a>
@@ -48,8 +45,8 @@
                                 <span class="link-effect"></span>
                             </a>
                         </li>
-                        <li class="nav-item active">
-                            <a href="ventures.html" class="nav-link" data-text="Ventures">
+                        <li class="nav-item">
+                            <a href="ventures.html" class="nav-link active" data-text="Ventures">
                                 <span class="link-text">Ventures</span>
                                 <span class="link-effect"></span>
                             </a>
@@ -57,6 +54,24 @@
                         <li class="nav-item">
                             <a href="stories.html" class="nav-link" data-text="Stories">
                                 <span class="link-text">Stories</span>
+                                <span class="link-effect"></span>
+                            </a>
+                        </li>
+                        <li class="nav-item has-dropdown">
+                            <a href="the-challenge.html" class="nav-link" data-text="The Challenge">
+                                <span class="link-text">The Challenge</span>
+                                <span class="link-effect"></span>
+                                <span class="dropdown-arrow">▼</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="the-challenge.html" class="dropdown-link">Overview</a></li>
+                                <li><a href="this-years-businesses.html" class="dropdown-link">This Year's Businesses</a></li>
+                                <li><a href="mentor.html" class="dropdown-link">Mentor with Us</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="https://give.regis.edu/campaigns/21516/donations/new" target="_blank" rel="noopener noreferrer" class="nav-link" data-text="Give">
+                                <span class="link-text">Give</span>
                                 <span class="link-effect"></span>
                             </a>
                         </li>
@@ -81,10 +96,15 @@
             <div class="mobile-menu" id="mobileMenu">
                 <div class="mobile-menu-content">
                     <ul class="mobile-nav-list">
-                        <li><a href="index.html#about" class="mobile-nav-link">About</a></li>
+                        <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+                        <li><a href="about.html" class="mobile-nav-link">About</a></li>
                         <li><a href="events.html" class="mobile-nav-link">Events</a></li>
-                        <li><a href="ventures.html" class="mobile-nav-link">Ventures</a></li>
-                        <li><a href="ventures.html" class="mobile-nav-link">Ventures</a></li>
+                        <li><a href="ventures.html" class="mobile-nav-link active">Ventures</a></li>
+                        <li><a href="stories.html" class="mobile-nav-link">Stories</a></li>
+                        <li><a href="the-challenge.html" class="mobile-nav-link">The Challenge</a></li>
+                        <li><a href="this-years-businesses.html" class="mobile-nav-link">This Year's Businesses</a></li>
+                        <li><a href="mentor.html" class="mobile-nav-link">Mentor with Us</a></li>
+                        <li><a href="https://give.regis.edu/campaigns/21516/donations/new" target="_blank" rel="noopener noreferrer" class="mobile-nav-link">Give</a></li>
                     </ul>
                 </div>
             </div>
@@ -100,10 +120,10 @@
                 <h1 class="ventures-title">Innovation is the key to entrepreneurial success</h1>
                 <div class="ventures-description">
                     <p>Explore inspiring stories from Regis Innovation Center alumni on ways to build or accelerate successful ventures.</p>
-                    <div class="ventures-cta">
+                    <a href="the-challenge.html" class="ventures-cta">
                         <span class="cta-icon">→</span>
                         <span class="cta-text">More tips and tricks for building successful ventures</span>
-                    </div>
+                    </a>
                 </div>
             </div>
 
@@ -172,14 +192,14 @@
                 <!-- Venture Card 5 -->
                 <div class="venture-card" onclick="window.location.href='venture-details/old-medows.html'">
                     <div class="venture-image">
-                        <img src="assets/stories/oldmedows.png" alt="Old Medows Venture" class="card-image">
+                        <img src="assets/stories/oldmedows.png" alt="Autumn Meadows Venture" class="card-image">
                     </div>
                     <div class="venture-content">
-                        <h3 class="venture-card-title">Old Medows</h3>
+                        <h3 class="venture-card-title">Autumn Meadows</h3>
                         <p class="venture-description">Culturally sensitive nursing home that aims to solve the challenge of finding elder care that is sensitive to diverse cultural backgrounds and traditions.</p>
                         <button class="venture-action-btn">
                             <span class="btn-icon">→</span>
-                            <span class="btn-text">Explore Old Medows</span>
+                            <span class="btn-text">Explore Autumn Meadows</span>
                         </button>
                     </div>
                 </div>
@@ -207,38 +227,42 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <img src="assets/images/regis-logo-white.png" alt="Regis Innovation Center" class="footer-logo">
+                    <img src="assets/logo.png" alt="Regis Innovation Center" class="footer-logo">
                     <p>Fostering innovation and entrepreneurship in the heart of Denver</p>
                 </div>
                 <div class="footer-section">
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="index.html#about">About</a></li>
-                        <li><a href="index.html#programs">Programs</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
                         <li><a href="events.html">Events</a></li>
+                        <li><a href="ventures.html">Ventures</a></li>
+                        <li><a href="stories.html">Stories</a></li>
+                        <li><a href="the-challenge.html">The Challenge</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h4>Programs</h4>
                     <ul>
-                        <li><a href="#">Innovation Incubator</a></li>
-                        <li><a href="#">Skills Workshops</a></li>
-                        <li><a href="#">Mentorship Network</a></li>
-                        <li><a href="#">Startup Accelerator</a></li>
+                        <li><a href="https://www.magisfactory.com/" target="_blank" rel="noopener noreferrer">Magis Factory</a></li>
+                        <li><a href="https://www.connectsworkspace.com/golden-startup-coffee" target="_blank" rel="noopener noreferrer">Golden Startup Coffee</a></li>
+                        <li><a href="https://www.colorado.edu/innovate/colorado-sustainability-challenge" target="_blank" rel="noopener noreferrer">Colorado Sustainability Challenge</a></li>
+                        <li><a href="https://www.regis.edu/" target="_blank" rel="noopener noreferrer">Regis University</a></li>
+                        <li><a href="https://www.regis.edu/academics/colleges-and-schools/anderson/" target="_blank" rel="noopener noreferrer">Anderson College of Business and Computing</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h4>Connect</h4>
                     <div class="social-links">
-                        <a href="#" class="social-link">LinkedIn</a>
-                        <a href="#" class="social-link">Twitter</a>
-                        <a href="#" class="social-link">Facebook</a>
-                        <a href="#" class="social-link">Instagram</a>
+                        <a href="https://www.linkedin.com/search/results/all/?fetchDeterministicClustersOnly=true&heroEntityKey=urn%3Ali%3Aorganization%3A27004267&keywords=regis%20university%20innovation%20challenge&origin=RICH_QUERY_TYPEAHEAD_HISTORY&position=0&sid=V-C" target="_blank" rel="noopener noreferrer" class="social-link">LinkedIn</a>
+                        <a href="https://x.com/RegisInnovation" target="_blank" rel="noopener noreferrer" class="social-link">Twitter</a>
+                        <a href="https://www.facebook.com/regisinnovation/" target="_blank" rel="noopener noreferrer" class="social-link">Facebook</a>
+                        <a href="https://www.instagram.com/regisinnovation/" target="_blank" rel="noopener noreferrer" class="social-link">Instagram</a>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Regis Innovation Center. All rights reserved.</p>
+                <p>&copy; 2026 Regis Innovation Center. All rights reserved.</p>
             </div>
         </div>
     </footer>

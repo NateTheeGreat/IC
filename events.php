@@ -215,7 +215,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <img src="assets/images/regis-logo-white.png" alt="Regis Innovation Center" class="footer-logo">
+                    <img src="assets/logo.png" alt="Regis Innovation Center" class="footer-logo">
                     <p>Fostering innovation and entrepreneurship in the heart of Denver</p>
                 </div>
                 <div class="footer-section">
@@ -247,7 +247,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Regis Innovation Center. All rights reserved.</p>
+                <p>&copy; 2026 Regis Innovation Center. All rights reserved.</p>
             </div>
         </div>
     </footer>

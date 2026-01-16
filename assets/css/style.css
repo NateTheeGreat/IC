@@ -221,13 +221,13 @@ body {
 
 .link-effect {
     position: absolute;
-    bottom: -1px;
-    left: 50%;
+    bottom: 25px;
+    left: 0;
     width: 0;
     height: 2px;
-    background: linear-gradient(90deg, #002B49, #F1C400);
-    border-radius: 2px;
-    transform: translateX(-50%);
+    background: #002B49;
+    border-radius: 0;
+    transform: translateX(0);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -237,11 +237,16 @@ body {
 }
 
 .nav-link:hover .link-effect,
-.nav-item.active .nav-link .link-effect {
+.nav-link.active .link-effect {
     width: 100%;
 }
 
-.nav-item.active .nav-link .link-text {
+/* Hide active link's underline when hovering over other links */
+.nav-menu:hover .nav-link.active:not(:hover) .link-effect {
+    width: 0;
+}
+
+.nav-link.active .link-text {
     color: #002B49;
     font-weight: 600;
 }
@@ -399,7 +404,7 @@ body {
 .hamburger-toggle {
     width: 56px;
     height: 56px;
-    display: flex;
+    display: none; /* Hidden by default on desktop */
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -548,6 +553,13 @@ body {
     transform: translateX(8px);
 }
 
+.mobile-nav-link.active {
+    background: rgba(0, 43, 73, 0.1);
+    color: #002B49;
+    font-weight: 600;
+    border-bottom: 2px solid #002B49;
+}
+
 .mobile-nav-link.special {
     background: linear-gradient(135deg, #111 0%, #333 100%);
     color: white;
@@ -609,6 +621,7 @@ body {
     
     .action-zone {
         gap: 16px;
+        display: flex; /* Ensure action zone is visible */
     }
     
     .search-component {
@@ -617,6 +630,10 @@ body {
     
     .mobile-toggle {
         display: flex;
+    }
+    
+    .hamburger-toggle {
+        display: flex; /* Show hamburger on tablets and mobile */
     }
     
     .logo-inner {
@@ -638,6 +655,8 @@ body {
     .nav-container {
         padding: 0 20px;
         min-height: 64px;
+        display: grid;
+        grid-template-columns: 1fr auto;
     }
     
     .announcement-content {
@@ -667,6 +686,20 @@ body {
     
     .login-button {
         display: none;
+    }
+    
+    .brand-zone {
+        display: flex; /* Ensure logo is visible */
+    }
+    
+    .action-zone {
+        display: flex; /* Ensure hamburger area is visible */
+    }
+    
+    .hamburger-toggle {
+        display: flex; /* Show hamburger on mobile */
+        width: 48px;
+        height: 48px;
     }
 }
 
@@ -1246,6 +1279,59 @@ p {
 .showcase-image.fade-in {
     opacity: 1;
     transform: scale(1);
+}
+
+/* Navigation Arrows */
+.showcase-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0;
+    pointer-events: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.curved-image-container:hover .showcase-arrow {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.showcase-arrow-prev {
+    left: 20px;
+}
+
+.showcase-arrow-next {
+    right: 20px;
+}
+
+.showcase-arrow:hover {
+    background: rgba(255, 255, 255, 1);
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.showcase-arrow:active {
+    transform: translateY(-50%) scale(0.95);
+}
+
+.showcase-arrow svg {
+    color: #1a1a1a;
+    transition: color 0.3s ease;
+}
+
+.showcase-arrow:hover svg {
+    color: #0066cc;
 }
 
 /* Image Overlay */
@@ -1924,9 +2010,66 @@ p {
         grid-template-columns: 1fr;
     }
 
+    /* Footer Mobile Optimization */
+    .footer {
+        padding: 40px 0 20px;
+    }
+
     .footer-content {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 30px;
+        grid-template-columns: 1fr;
+        gap: 35px;
+        text-align: center;
+    }
+
+    .footer-section {
+        padding: 0 20px;
+    }
+
+    .footer-section h4 {
+        font-size: 1.1rem;
+        margin-bottom: 15px;
+    }
+
+    .footer-section p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .footer-section ul li {
+        margin-bottom: 12px;
+    }
+
+    .footer-section a {
+        font-size: 0.95rem;
+        display: inline-block;
+        padding: 5px 0;
+    }
+
+    .footer-logo {
+        height: 50px;
+        margin-bottom: 20px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .social-links {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .social-link {
+        padding: 10px 16px;
+        font-size: 0.95rem;
+    }
+
+    .footer-bottom {
+        margin-top: 30px;
+        padding-top: 20px;
+        font-size: 0.9rem;
     }
 
     .event-card {
@@ -1948,8 +2091,52 @@ p {
 }
 
 @media (max-width: 480px) {
+    /* Footer Extra Small Mobile Optimization */
+    .footer {
+        padding: 30px 0 15px;
+    }
+
     .footer-content {
-        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .footer-section {
+        padding: 0 15px;
+    }
+
+    .footer-section h4 {
+        font-size: 1rem;
+        margin-bottom: 12px;
+    }
+
+    .footer-section p {
+        font-size: 0.9rem;
+    }
+
+    .footer-section a {
+        font-size: 0.9rem;
+    }
+
+    .footer-logo {
+        height: 45px;
+        margin-bottom: 15px;
+    }
+
+    .social-links {
+        gap: 10px;
+    }
+
+    .social-link {
+        padding: 8px 14px;
+        font-size: 0.85rem;
+    }
+
+    .footer-bottom {
+        margin-top: 25px;
+        padding-top: 15px;
+        font-size: 0.85rem;
+        padding-left: 15px;
+        padding-right: 15px;
     }
 
     .hero-title {
@@ -2090,13 +2277,14 @@ p {
     font-size: clamp(2.2rem, 3.5vw, 3rem);
     font-weight: 800;
     color: #F1C400;
-    display: block;
+    display: inline-block;
     margin-bottom: 8px;
     background: linear-gradient(135deg, #F1C400 0%, #FFD700 50%, #FFA500 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     line-height: 1;
+    white-space: nowrap;
 }
 
 .impact-metrics .metric-label {
@@ -2809,6 +2997,64 @@ p {
 .explore-more-btn:hover .btn-arrow {
     transform: translateX(4px);
     color: #333;
+}
+
+/* Winner Actions Container */
+.winner-actions {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* View Website Button */
+.view-website-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0;
+    background: transparent;
+    color: #002B49;
+    border: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    text-decoration: none;
+}
+
+.view-website-btn .btn-text {
+    position: relative;
+}
+
+.view-website-btn .btn-text::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #002B49 0%, #0066cc 100%);
+    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.view-website-btn:hover .btn-text::after {
+    width: 100%;
+}
+
+.view-website-btn:hover {
+    color: #0066cc;
+}
+
+.view-website-btn .btn-arrow {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    color: #002B49;
+}
+
+.view-website-btn:hover .btn-arrow {
+    transform: translate(2px, -2px);
+    color: #0066cc;
 }
 
 @keyframes cardEntrance {
@@ -3808,37 +4054,175 @@ p {
     color: #333333;
 }
 
-/* Events Grid */
-.harvard-events-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 80px;
-    align-items: start;
+/* Events Carousel Wrapper */
+.events-carousel-wrapper {
+    position: relative;
+    padding: 0 60px;
 }
 
-/* Individual Event Cards */
+@media (max-width: 768px) {
+    .events-carousel-wrapper {
+        padding: 0 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .events-carousel-wrapper {
+        padding: 0 45px;
+    }
+}
+
+/* Carousel Arrows */
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #ffffff;
+    border: 1px solid #e8e8e8;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+@media (max-width: 768px) {
+    .carousel-arrow {
+        width: 44px;
+        height: 44px;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-arrow {
+        width: 40px;
+        height: 40px;
+        border-width: 1.5px;
+    }
+}
+
+.carousel-arrow:hover {
+    background: #F1C400;
+    border-color: #F1C400;
+    box-shadow: 0 4px 12px rgba(241, 196, 0, 0.3);
+}
+
+.carousel-arrow:hover svg path {
+    stroke: #002B49;
+}
+
+.carousel-arrow svg {
+    width: 24px;
+    height: 24px;
+}
+
+.carousel-arrow svg path {
+    stroke: #333333;
+    transition: stroke 0.3s ease;
+}
+
+.carousel-arrow-left {
+    left: 0;
+}
+
+.carousel-arrow-right {
+    right: 0;
+}
+
+.carousel-arrow:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.carousel-arrow:disabled:hover {
+    background: #ffffff;
+    border-color: #e8e8e8;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Events Grid */
+.harvard-events-grid {
+    display: flex;
+    gap: 40px;
+    align-items: start;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    scroll-snap-type: x mandatory; /* Snap to cards on mobile */
+}
+
+.harvard-events-grid::-webkit-scrollbar {
+    display: none;
+}
+
+/* Snap points for smooth card scrolling on mobile */
+@media (max-width: 768px) {
+    .harvard-events-grid {
+        scroll-snap-type: x proximity;
+        overscroll-behavior-x: contain;
+    }
+    
+    .harvard-event-card {
+        scroll-snap-align: start;
+        scroll-snap-stop: normal;
+    }
+}
+
+/* Individual Event Cards - 3 Cards Display */
 .harvard-event-card {
+    min-width: calc((100% - 80px) / 3);
+    flex-shrink: 0;
     background: #ffffff;
     border: none;
     padding: 0;
     position: relative;
     cursor: pointer;
     transition: all 0.3s ease;
-    width: 100%;
-    min-width: 400px;
+    display: flex;
+    flex-direction: column;
 }
 
-.harvard-event-card:hover {
-    transform: translateY(-2px);
+/* Hover effects - only on non-touch devices */
+@media (hover: hover) and (pointer: fine) {
+    .harvard-event-card:hover {
+        transform: translateY(-2px);
+    }
+    
+    .harvard-event-card:hover .event-square-image {
+        transform: translateY(-3px);
+        box-shadow: 
+            0 12px 30px rgba(0, 0, 0, 0.4),
+            0 8px 16px rgba(0, 0, 0, 0.25),
+            0 4px 8px rgba(0, 0, 0, 0.15);
+    }
+}
+
+/* Active state for touch devices */
+@media (hover: none) and (pointer: coarse) {
+    .harvard-event-card:active {
+        opacity: 0.95;
+    }
+    
+    .harvard-event-card:active .event-square-image {
+        transform: scale(0.98);
+    }
 }
 
 /* Event Date */
 .harvard-event-date {
-    margin-bottom: 15px;
+    margin-bottom: 6px;
 }
 
 .harvard-event-day {
-    font-size: 1rem;
+    font-size: 0.8rem;
     font-weight: 400;
     color: #999999;
     letter-spacing: 0.5px;
@@ -3848,12 +4232,12 @@ p {
 .harvard-event-content {
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    margin-bottom: 20px;
+    gap: 6px;
+    margin-bottom: 12px;
 }
 
 .harvard-event-title {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 400;
     color: #000000;
     line-height: 1.3;
@@ -3870,30 +4254,30 @@ p {
 }
 
 .harvard-event-venue {
-    font-size: 0.95rem;
+    font-size: 0.8rem;
     color: #666666;
     font-weight: 400;
 }
 
 .harvard-event-time {
-    font-size: 0.95rem;
+    font-size: 0.8rem;
     color: #666666;
     font-weight: 400;
     white-space: nowrap;
 }
 
-/* Square Event Images with Sharp Edges and Black Shadow */
+/* Large Event Image */
 .harvard-event-image {
-    margin-top: 20px;
+    margin-top: 12px;
     position: relative;
     width: 100%;
-    height: 320px;
+    height: 180px;
     overflow: hidden;
 }
 
 .event-square-image {
     width: 100%;
-    height: 320px;
+    height: 180px;
     object-fit: cover;
     border-radius: 0;
     box-shadow: 
@@ -3902,14 +4286,6 @@ p {
         0 2px 4px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
     display: block;
-}
-
-.harvard-event-card:hover .event-square-image {
-    transform: translateY(-3px);
-    box-shadow: 
-        0 12px 30px rgba(0, 0, 0, 0.4),
-        0 8px 16px rgba(0, 0, 0, 0.25),
-        0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 /* Responsive Design */
@@ -3972,7 +4348,7 @@ p {
 
 @media (max-width: 768px) {
     .harvard-events-section {
-        padding: 60px 0 80px;
+        padding: 50px 0 70px;
     }
     
     .harvard-events-container {
@@ -3983,54 +4359,193 @@ p {
         flex-direction: column;
         align-items: flex-start;
         gap: 15px;
+        margin-bottom: 35px;
+        padding-bottom: 20px;
     }
     
     .harvard-events-title {
         font-size: 1.8rem;
+        letter-spacing: -0.8px;
+    }
+    
+    .harvard-browse-link {
+        font-size: 0.95rem;
     }
     
     .harvard-events-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
+        gap: 35px;
     }
     
     .harvard-event-card {
-        min-width: auto;
+        min-width: 85%;
+        padding-right: 10px;
+    }
+    
+    .harvard-event-date {
+        margin-bottom: 8px;
+    }
+    
+    .harvard-event-day {
+        font-size: 0.85rem;
+        font-weight: 500;
+    }
+    
+    .harvard-event-content {
+        gap: 8px;
+        margin-bottom: 14px;
+    }
+    
+    .harvard-event-title {
+        font-size: 1.15rem;
+        line-height: 1.4;
     }
     
     .harvard-event-details {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 8px;
+        flex-direction: row;
+        align-items: center;
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+    
+    .harvard-event-venue,
+    .harvard-event-time {
+        font-size: 0.85rem;
     }
     
     .harvard-event-image {
-        height: 280px;
+        height: 220px;
+        margin-top: 14px;
     }
     
     .event-square-image {
-        height: 280px;
+        height: 220px;
+        border-radius: 2px;
     }
 }
 
 @media (max-width: 480px) {
+    .harvard-events-section {
+        padding: 40px 0 60px;
+    }
+    
     .harvard-events-container {
         padding: 0 15px;
     }
     
+    .harvard-events-header {
+        margin-bottom: 30px;
+        padding-bottom: 18px;
+    }
+    
     .harvard-events-title {
-        font-size: 1.6rem;
+        font-size: 1.5rem;
+        letter-spacing: -0.6px;
+    }
+    
+    .harvard-browse-link {
+        font-size: 0.9rem;
+    }
+    
+    .harvard-events-grid {
+        gap: 30px;
+    }
+    
+    .harvard-event-card {
+        min-width: 90%;
+    }
+    
+    .harvard-event-date {
+        margin-bottom: 6px;
+    }
+    
+    .harvard-event-day {
+        font-size: 0.8rem;
+    }
+    
+    .harvard-event-content {
+        gap: 6px;
+        margin-bottom: 12px;
     }
     
     .harvard-event-title {
-        font-size: 1.3rem;
+        font-size: 1.1rem;
+        line-height: 1.35;
+    }
+    
+    .harvard-event-details {
+        gap: 10px;
+    }
+    
+    .harvard-event-venue,
+    .harvard-event-time {
+        font-size: 0.8rem;
     }
     
     .harvard-event-image {
-        height: 240px;
+        height: 200px;
+        margin-top: 12px;
     }
     
     .event-square-image {
-        height: 240px;
+        height: 200px;
+        border-radius: 2px;
+    }
+}
+
+/* Extra small devices - Enhanced touch targets and better scroll */
+@media (max-width: 375px) {
+    .harvard-events-section {
+        padding: 35px 0 50px;
+    }
+    
+    .harvard-events-container {
+        padding: 0 12px;
+    }
+    
+    .events-carousel-wrapper {
+        padding: 0 40px;
+    }
+    
+    .carousel-arrow {
+        width: 36px;
+        height: 36px;
+    }
+    
+    .carousel-arrow svg {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .harvard-events-header {
+        margin-bottom: 25px;
+        padding-bottom: 15px;
+    }
+    
+    .harvard-events-title {
+        font-size: 1.4rem;
+    }
+    
+    .harvard-browse-link {
+        font-size: 0.85rem;
+    }
+    
+    .harvard-events-grid {
+        gap: 25px;
+    }
+    
+    .harvard-event-card {
+        min-width: 95%;
+    }
+    
+    .harvard-event-title {
+        font-size: 1.05rem;
+    }
+    
+    .harvard-event-image {
+        height: 180px;
+    }
+    
+    .event-square-image {
+        height: 180px;
     }
 }

@@ -9,15 +9,103 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Ultra-Premium Header Start -->
     <header class="premium-header">
-        <nav class="main-navigation">
+        <!-- Main Navigation Header -->
+        <nav class="main-navigation" role="navigation">
             <div class="nav-container">
-                <div class="brand-zone"><a href="../index.html"><img src="../assets/logo.png" alt="Regis Innovation Center"></a></div>
-                <div class="nav-links-zone"><ul class="nav-menu"><li><a href="../about.html">About</a></li><li><a href="../events.html" class="active">Events</a></li><li><a href="../ventures.html">Ventures</a></li><li><a href="../stories.html">Stories</a></li><li><a href="../index.html#contact">Contact</a></li></ul></div>
+                <!-- Brand Section -->
+                <div class="brand-zone">
+                    <a href="../index.html" class="brand-link">
+                        <img src="../assets/logo.png" alt="Regis Innovation Center" class="official-logo">
+                    </a>
+                </div>
+                
+                <!-- Navigation Links -->
+                <div class="nav-links-zone">
+                    <ul class="nav-menu">
+                        <li class="nav-item">
+                            <a href="../index.html" class="nav-link" data-text="Home">
+                                <span class="link-text">Home</span>
+                                <span class="link-effect"></span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../about.html" class="nav-link" data-text="About">
+                                <span class="link-text">About</span>
+                                <span class="link-effect"></span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../events.html" class="nav-link active" data-text="Events">
+                                <span class="link-text">Events</span>
+                                <span class="link-effect"></span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../ventures.html" class="nav-link" data-text="Ventures">
+                                <span class="link-text">Ventures</span>
+                                <span class="link-effect"></span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../stories.html" class="nav-link" data-text="Stories">
+                                <span class="link-text">Stories</span>
+                                <span class="link-effect"></span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../the-challenge.html" class="nav-link" data-text="The Challenge">
+                                <span class="link-text">The Challenge</span>
+                                <span class="link-effect"></span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="https://give.regis.edu/campaigns/21516/donations/new" target="_blank" rel="noopener noreferrer" class="nav-link" data-text="Give">
+                                <span class="link-text">Give</span>
+                                <span class="link-effect"></span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="nav-highlight"></div>
+                </div>
+                
+                <!-- Action Zone -->
+                <div class="action-zone">
+                    <button class="hamburger-toggle" aria-label="Menu" aria-expanded="false">
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Beautiful Separator Line -->
+            <div class="header-separator"></div>
+            
+            <!-- Mobile Menu -->
+            <div class="mobile-menu" id="mobileMenu">
+                <div class="mobile-menu-content">
+                    <ul class="mobile-nav-list">
+                        <li><a href="../index.html" class="mobile-nav-link">Home</a></li>
+                        <li><a href="../about.html" class="mobile-nav-link">About</a></li>
+                        <li><a href="../events.html" class="mobile-nav-link active">Events</a></li>
+                        <li><a href="../ventures.html" class="mobile-nav-link">Ventures</a></li>
+                        <li><a href="../stories.html" class="mobile-nav-link">Stories</a></li>
+                        <li><a href="../the-challenge.html" class="mobile-nav-link">The Challenge</a></li>
+                        <li><a href="https://give.regis.edu/campaigns/21516/donations/new" target="_blank" rel="noopener noreferrer" class="mobile-nav-link">Give</a></li>
+                    </ul>
+                </div>
             </div>
         </nav>
     </header>
-    <section class="back-navigation"><div class="container"><a href="../events.html" class="back-link">← Back to Events</a></div></section>
+    <!-- Ultra-Premium Header End -->
+    <section class="back-navigation"><div class="container"><a href="../events.html" class="back-link">← Back to Events</a>
+        <div style="display: flex; gap: 15px; align-items: center;">
+            <a href="second-mentor-saturday.html" style="padding: 8px 16px; background: #1a365d; color: white; text-decoration: none; border-radius: 5px; font-weight: 500;">← Previous Event</a>
+            <a href="third-mentor-saturday.html" style="padding: 8px 16px; background: #1a365d; color: white; text-decoration: none; border-radius: 5px; font-weight: 500;">Next Event →</a>
+        </div>
+    </div></section>
     <section class="event-header">
         <div class="container">
             <div class="event-header-content">
@@ -25,10 +113,9 @@
                 <div class="event-header-info">
                     <h1 class="event-title">Semifinal Pitch Round</h1>
                     <div class="event-meta-header">
-                        <div class="meta-item"><span class="meta-icon">🕐</span><span>6:00 PM - 9:00 PM</span></div>
-                        <div class="meta-item"><span class="meta-icon">📍</span><span>Innovation Center</span></div>
+                        <div class="meta-item"><span class="meta-icon">🕐</span><span class="meta-text">6:00 PM - 9:00 PM</span></div>
+                        <div class="meta-item"><span class="meta-icon">📍</span><span class="meta-text">Innovation Center</span></div>
                     </div>
-                    <button class="register-btn-prominent">Attend Event</button>
                 </div>
             </div>
         </div>
@@ -52,7 +139,7 @@
             </div>
         </div>
     </section>
-    <footer class="footer"><div class="container"><p>&copy; 2025 Regis Innovation Center</p></div></footer>
+    <footer class="footer"><div class="container"><p>&copy; 2026 Regis Innovation Center</p></div></footer>
     <script src="../assets/js/main.js"></script>
     <script src="../assets/js/event-details.js"></script>
 </body>

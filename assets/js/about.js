@@ -1489,6 +1489,7 @@ function initPhoneMockupVideos() {
     if (videoItems.length === 0) return;
     
     const totalVideos = videoItems.length;
+    let isVideoSectionVisible = false;
     
     function showVideo(index) {
         // Hide all videos and info cards
@@ -1496,7 +1497,7 @@ function initPhoneMockupVideos() {
             const video = item.querySelector('.student-video');
             item.classList.toggle('active', i === index);
             
-            if (i === index) {
+            if (i === index && isVideoSectionVisible) {
                 video.currentTime = 0; // Reset to start
                 video.play().catch(e => console.log('Video autoplay prevented:', e));
             } else {
@@ -1517,6 +1518,35 @@ function initPhoneMockupVideos() {
         showVideo(nextIndex);
     }
     
+    // Intersection Observer to detect when video section is visible
+    const phoneShowcase = document.querySelector('.phone-showcase-container');
+    if (phoneShowcase) {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                isVideoSectionVisible = entry.isIntersecting;
+                
+                if (entry.isIntersecting) {
+                    // Section is visible, play the current video
+                    const currentVideo = videoItems[currentVideoIndex]?.querySelector('.student-video');
+                    if (currentVideo) {
+                        currentVideo.play().catch(e => console.log('Video autoplay prevented:', e));
+                    }
+                } else {
+                    // Section is not visible, pause all videos
+                    videoItems.forEach(item => {
+                        const video = item.querySelector('.student-video');
+                        video.pause();
+                    });
+                }
+            });
+        }, {
+            threshold: 0.5, // Trigger when 50% of the section is visible
+            rootMargin: '0px'
+        });
+        
+        observer.observe(phoneShowcase);
+    }
+    
     // Add ended event listeners to all videos for seamless transitions
     videoItems.forEach((item, index) => {
         const video = item.querySelector('.student-video');
@@ -1535,11 +1565,18 @@ function initPhoneMockupVideos() {
         });
     });
     
-    // Initialize first video
-    showVideo(0);
+    // Initialize first video (but don't play until visible)
+    videoItems.forEach((item, i) => {
+        item.classList.toggle('active', i === 0);
+    });
+    
+    infoCards.forEach((card, i) => {
+        card.classList.toggle('active', i === 0);
+    });
+    
+    currentVideoIndex = 0;
     
     // Pause on hover
-    const phoneShowcase = document.querySelector('.phone-showcase-container');
     if (phoneShowcase) {
         phoneShowcase.addEventListener('mouseenter', () => {
             const currentVideo = videoItems[currentVideoIndex].querySelector('.student-video');
@@ -1547,8 +1584,10 @@ function initPhoneMockupVideos() {
         });
         
         phoneShowcase.addEventListener('mouseleave', () => {
-            const currentVideo = videoItems[currentVideoIndex].querySelector('.student-video');
-            currentVideo.play().catch(e => console.log('Resume prevented:', e));
+            if (isVideoSectionVisible) {
+                const currentVideo = videoItems[currentVideoIndex].querySelector('.student-video');
+                currentVideo.play().catch(e => console.log('Resume prevented:', e));
+            }
         });
     }
     

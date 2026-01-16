@@ -83,7 +83,6 @@ function showCalendarOptions() {
         <h3 style="margin-top: 0; margin-bottom: 20px; color: #1a365d;">Add to Calendar</h3>
         <div style="display: flex; flex-direction: column; gap: 10px;">
             <button onclick="addToGoogleCalendar()" style="padding: 12px 20px; background: #4285f4; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;">Google Calendar</button>
-            <button onclick="addToOutlookCalendar()" style="padding: 12px 20px; background: #0078d4; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;">Outlook Calendar</button>
             <button onclick="downloadICS()" style="padding: 12px 20px; background: #6c757d; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;">Download ICS File</button>
             <button onclick="closeCalendarModal()" style="padding: 12px 20px; background: white; color: #333; border: 1px solid #ddd; border-radius: 5px; cursor: pointer; font-size: 16px; margin-top: 10px;">Cancel</button>
         </div>
@@ -105,21 +104,26 @@ function closeCalendarModal() {
 // Get event details from the page
 function getCurrentEventDetails() {
     const title = document.querySelector('.event-title')?.textContent || 'Event';
-    const dateText = document.querySelector('.event-badge .event-month')?.textContent || '';
+    const monthText = document.querySelector('.event-badge .event-month')?.textContent || '';
     const dayText = document.querySelector('.event-badge .event-day')?.textContent || '';
     const timeText = document.querySelector('.event-meta-header .meta-text')?.textContent || '';
     const location = document.querySelectorAll('.event-meta-header .meta-text')[1]?.textContent || 'Regis Innovation Center';
     const description = document.querySelector('.event-description')?.textContent || '';
     
-    return { title, dateText, dayText, timeText, location, description };
+    return { title, monthText, dayText, timeText, location, description };
 }
 
 // Convert event details to date objects
-function parseEventDateTime(dateText, dayText, timeText) {
-    const months = { 'Jan': 0, 'Feb': 1, 'Mar': 2, 'Apr': 3, 'May': 4, 'Jun': 5, 'Jul': 6, 'Aug': 7, 'Sep': 8, 'Oct': 9, 'Nov': 10, 'Dec': 11 };
-    const month = months[dateText] || 0;
+function parseEventDateTime(monthText, dayText, timeText) {
+    const months = { 
+        'Jan': 0, 'Feb': 1, 'Mar': 2, 'Apr': 3, 'May': 4, 'Jun': 5, 
+        'Jul': 6, 'Aug': 7, 'Sep': 8, 'Oct': 9, 'Nov': 10, 'Dec': 11 
+    };
+    const month = months[monthText] || 0;
     const day = parseInt(dayText) || 1;
-    const year = 2025; // or 2026 for events after December
+    
+    // Determine year: events in Oct-Dec are 2025, Jan onwards are 2026
+    const year = (month >= 9) ? 2025 : 2026;
     
     // Parse time (e.g., "6:00 PM - 8:00 PM")
     const timeParts = timeText.split(' - ');
@@ -153,7 +157,7 @@ function formatDateForCalendar(date) {
     const day = String(date.getDate()).padStart(2, '0');
     const hours = String(date.getHours()).padStart(2, '0');
     const minutes = String(date.getMinutes()).padStart(2, '0');
-    return `${year}${month}${day}T${hours}${minutes}00`;
+    return `${year}${month}${day}T${hours}${minutes}00`;month
 }
 
 function addToGoogleCalendar() {
@@ -169,22 +173,11 @@ function addToGoogleCalendar() {
     closeCalendarModal();
 }
 
-function addToOutlookCalendar() {
-    const event = getCurrentEventDetails();
-    const { startDate, endDate } = parseEventDateTime(event.dateText, event.dayText, event.timeText);
-    
-    const startFormatted = startDate.toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z';
-    const endFormatted = endDate.toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z';
-    
-    const outlookUrl = `https://outlook.live.com/calendar/0/deeplink/compose?subject=${encodeURIComponent(event.title)}&startdt=${startFormatted}&enddt=${endFormatted}&body=${encodeURIComponent(event.description)}&location=${encodeURIComponent(event.location)}`;
-    
-    window.open(outlookUrl, '_blank');
-    closeCalendarModal();
-}
+
 
 function downloadICS() {
     const event = getCurrentEventDetails();
-    const { startDate, endDate } = parseEventDateTime(event.dateText, event.dayText, event.timeText);
+    const { startDate, endDate } = parseEventDateTime(event.monthText, event.dayText, event.timeText);
     
     const formatICSDate = (date) => {
         return date.toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z';
