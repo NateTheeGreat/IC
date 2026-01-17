@@ -1,5 +1,30 @@
 // Main JavaScript for Regis Innovation Center
 
+// ====== Performance: Debounce Function ======
+function debounce(func, wait = 10) {
+    let timeout;
+    return function executedFunction(...args) {
+        const later = () => {
+            clearTimeout(timeout);
+            func(...args);
+        };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+    };
+}
+
+// ====== Performance: Throttle Function ======
+function throttle(func, limit = 10) {
+    let inThrottle;
+    return function(...args) {
+        if (!inThrottle) {
+            func.apply(this, args);
+            inThrottle = true;
+            setTimeout(() => inThrottle = false, limit);
+        }
+    };
+}
+
 // ====== Dropdown Menu Accessibility & Mobile Support ======
 function initDropdownMenu() {
     const dropdownItems = document.querySelectorAll('.nav-item.has-dropdown');

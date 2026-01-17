@@ -1,0 +1,56 @@
+/* ===== PERFORMANCE OVERLAY - Reduce Heavy Animations ===== */
+
+/* Simplify banner image transitions on all devices */
+.banner-image {
+    transform: scale(1) !important;
+    transition: opacity 1s ease !important;
+}
+
+.slide {
+    transition: opacity 1s ease !important;
+}
+
+/* Disable expensive particle effects */
+.banner-vignette::before,
+.banner-vignette::after {
+    animation: none !important;
+    opacity: 0 !important;
+}
+
+/* Simplify vignette on all devices */
+.banner-vignette {
+    background: 
+        radial-gradient(ellipse at center, transparent 20%, rgba(0,0,0,0.4) 60%, rgba(0,0,0,0.8) 90%),
+        linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 40%) !important;
+}
+
+/* Reduce scroll animation complexity */
+.section {
+    transition: opacity 0.4s ease, transform 0.4s ease !important;
+}
+
+/* Optimize image container animations */
+.image-container img {
+    transition: transform 0.3s ease !important;
+}
+
+/* Simplify text animations */
+.banner-title,
+.banner-description {
+    animation-duration: 0.8s !important;
+}
+
+/* Disable float animations - very expensive */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+}
+
+/* Reduce scroll indicator animation */
+.scroll-indicator {
+    animation-duration: 1.5s !important;
+}
+
+/* Optimize section reveals */
+.section.visible {
+    transition: opacity 0.5s ease !important;
+}

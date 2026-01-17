@@ -1,0 +1,186 @@
+/* Performance Optimization CSS - AGGRESSIVE MODE */
+
+/* ===== CRITICAL: Reduce Paint/Composite Operations ===== */
+
+/* Content-visibility for off-screen sections */
+.section {
+    content-visibility: auto;
+    contain-intrinsic-size: 0 800px;
+}
+
+/* GPU Acceleration for animations - LIMITED will-change */
+.nav-link,
+.mobile-nav-link {
+    will-change: transform;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}
+
+.banner-title,
+.banner-description {
+    will-change: opacity;
+    transform: translateZ(0);
+}
+
+/* Remove will-change after animation completes */
+.image-container img {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}
+
+/* Optimize transitions - use transform only */
+.nav-link::after,
+.link-effect {
+    transform: translateZ(0);
+}
+
+/* ===== DISABLE HEAVY ANIMATIONS ON 4K ===== */
+@media (min-width: 2560px) {
+    /* Disable zoom/scale animations on 4K */
+    .banner-image {
+        transition: none !important;
+        transform: scale(1) !important;
+    }
+    
+    .slide {
+        transition: opacity 0.5s ease !important;
+    }
+    
+    /* Reduce banner vignette complexity */
+    .banner-vignette {
+        background: radial-gradient(ellipse at center, transparent 20%, rgba(0,0,0,0.7) 80%) !important;
+    }
+    
+    .banner-vignette::before,
+    .banner-vignette::after {
+        display: none !important;
+    }
+    
+    /* Disable parallax effects */
+    * {
+        background-attachment: scroll !important;
+    }
+}
+
+/* ===== REDUCE ANIMATIONS FOR BETTER PERFORMANCE ===== */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Optimize image rendering */
+img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    /* Prevent layout shift */
+    height: auto;
+}
+
+/* ===== LIMIT SLIDESHOW ANIMATIONS ===== */
+.slideshow-container {
+    transform: translate3d(0, 0, 0);
+    will-change: auto; /* Remove persistent will-change */
+}
+
+.slide {
+    transform: translate3d(0, 0, 0);
+}
+
+/* Smooth scrolling optimization */
+html {
+    scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+/* ===== AGGRESSIVE 4K OPTIMIZATIONS ===== */
+@media (min-width: 3840px) {
+    /* Ultra aggressive on 4K+ displays */
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+    
+    .banner-image {
+        transform: none !important;
+    }
+    
+    /* Keep only essential transitions */
+    .nav-link,
+    button,
+    a {
+        transition: opacity 0.2s ease !important;
+    }
+}
+
+/* ===== REDUCE REFLOWS/REPAINTS ===== */
+.image-container {
+    /* Prevent layout shifts */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Lazy load optimization - reduce initial render cost */
+img[loading="lazy"] {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+/* ===== CONTAIN LAYOUT FOR PERFORMANCE ===== */
+.section {
+    contain: layout style paint;
+}
+
+.image-container {
+    contain: layout paint;
+}
+
+.text-container {
+    contain: style;
+}
+
+/* ===== OPTIMIZE COMPOSITING LAYERS ===== */
+.premium-header {
+    transform: translateZ(0);
+    will-change: transform;
+}
+
+.footer {
+    contain: layout style paint;
+}
+
+/* ===== REDUCE COMPOSITE LAYERS ===== */
+.hamburger-toggle {
+    transform: translateZ(0);
+}
+
+/* Disable expensive filters on lower-end devices */
+@media (max-width: 1920px) and (max-height: 1080px) {
+    .banner-vignette::before,
+    .banner-vignette::after {
+        opacity: 0.5;
+    }
+}
+
+/* ===== PASSIVE EVENT LISTENERS HINT ===== */
+* {
+    touch-action: manipulation;
+}
+
+/* ===== SIMPLIFY COMPLEX GRADIENTS ===== */
+@media (min-width: 2560px) {
+    .banner-vignette {
+        background: linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, transparent 50%, rgba(0,0,0,0.7) 100%) !important;
+    }
+}
+

@@ -9,12 +9,14 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     
     <!-- Styles -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/components.css">
     <link rel="stylesheet" href="assets/css/stories.css">
+    <link rel="stylesheet" href="assets/css/performance.css">
+    <link rel="stylesheet" href="assets/css/performance-overlay.css">
 </head>
 <body>
     <!-- Ultra-Premium Header Start -->
@@ -24,7 +26,7 @@
             <div class="nav-container">
                 <!-- Brand Section -->
                 <div class="brand-zone">
-                    <a href="#home" class="brand-link">
+                    <a href="index.html" class="brand-link">
                         <img src="assets/logo.png" alt="Regis Innovation Center" class="official-logo">
                     </a>
                 </div>
@@ -123,7 +125,7 @@
             <div class="banner-background">
                 <div class="slideshow-container">
                     <div class="slide active">
-                        <img src="assets/thisyear/all.jpg" alt="Innovation Background" class="banner-image">
+                        <img src="assets/thisyear/all.jpg" alt="Innovation Background" class="banner-image" width="1920" height="1080" fetchpriority="high">
                     </div>
                 </div>
                 <div class="banner-vignette"></div>
@@ -142,7 +144,7 @@
             <!-- Section 1: Hungry App -->
             <div class="section section-top">
                 <div class="image-container">
-                    <img src="assets/thisyear/hungry.png" alt="Hungry App Interface" />
+                    <img src="assets/thisyear/hungry.png" alt="Hungry App Interface" loading="lazy" />
                 </div>
                 <div class="text-container">
                     <h1>Connecting food lovers with weekly deals</h1>
@@ -158,14 +160,14 @@
                     <a href="https://meanderev.com/" target="_blank" rel="noopener noreferrer" class="website-link">View Website</a>
                 </div>
                 <div class="image-container">
-                    <img src="assets/thisyear/meanderev.png" alt="MeanderEV Platform" />
+                    <img src="assets/thisyear/meanderev.png" alt="MeanderEV Platform" loading="lazy" />
                 </div>
             </div>
 
             <!-- Section 3: Pickup Play -->
             <div class="section section-top">
                 <div class="image-container">
-                    <img src="assets/thisyear/pickupplay.png" alt="Pickup Play Platform" />
+                    <img src="assets/thisyear/pickupplay.png" alt="Pickup Play Platform" loading="lazy" />
                 </div>
                 <div class="text-container">
                     <h1>Reclaiming sports as a simple way to play</h1>
@@ -182,14 +184,14 @@
                     <a href="https://realxreal.ai/" target="_blank" rel="noopener noreferrer" class="website-link">View Website</a>
                 </div>
                 <div class="image-container">
-                    <img src="assets/thisyear/realxreal.png" alt="RealxRealAi Security" />
+                    <img src="assets/thisyear/realxreal.png" alt="RealxRealAi Security" loading="lazy" />
                 </div>
             </div>
 
             <!-- Section 5: SeedUp -->
             <div class="section section-top">
                 <div class="image-container">
-                    <img src="assets/thisyear/seedup.png" alt="SeedUp App" />
+                    <img src="assets/thisyear/seedup.png" alt="SeedUp App" loading="lazy" />
                 </div>
                 <div class="text-container">
                     <h1>Empowering financial confidence for young people</h1>
@@ -204,14 +206,14 @@
                     <p>Third Space Pilates is a modern wellness Pilates studio designed to be more than just a workout. Unlike traditional fitness studios where clients rush in and out, Third Space creates an intentional environment that blends Pilates, community, and mental wellbeing. Think spa-inspired locker rooms, lounge spaces, and killer Pilates classes creating a "third space"—a place outside of home and work where people feel grounded, supported, and connected.</p>
                 </div>
                 <div class="image-container">
-                    <img src="assets/thisyear/tsp.png" alt="Third Space Pilates Studio" />
+                    <img src="assets/thisyear/tsp.png" alt="Third Space Pilates Studio" loading="lazy" />
                 </div>
             </div>
 
             <!-- Section 7: Time to Play -->
             <div class="section section-top">
                 <div class="image-container">
-                    <img src="assets/thisyear/timetoplay.png" alt="Time to Play Platform" style="object-fit: contain; width: 100%; height: 400px;" />
+                    <img src="assets/thisyear/timetoplay.png" alt="Time to Play Platform" loading="lazy" style="object-fit: contain; width: 100%; height: 400px;" />
                 </div>
                 <div class="text-container">
                     <h1>Fostering friendship and belonging in children</h1>
@@ -227,14 +229,14 @@
                     <p>Tot Friendly Homes is a short-term rental consultancy that partners with property owners to create thoughtfully designed, family-ready stays for guests with children under the age of five. They bridge the gap between luxury hospitality and real family life, where elevated design meets everyday, essential comfort. Each property meets their verified standards for safety, style, and ease—making family travel feel effortless.</p>
                 </div>
                 <div class="image-container">
-                    <img src="assets/thisyear/tfh.png" alt="Tot Friendly Homes" style="object-fit: contain; width: 100%; height: 400px;" />
+                    <img src="assets/thisyear/tfh.png" alt="Tot Friendly Homes" loading="lazy" style="object-fit: contain; width: 100%; height: 400px;" />
                 </div>
             </div>
 
             <!-- Section 9: Tutio -->
             <div class="section section-top">
                 <div class="image-container">
-                    <img src="assets/thisyear/tutio.png" alt="Tutio Platform" />
+                    <img src="assets/thisyear/tutio.png" alt="Tutio Platform" loading="lazy" />
                 </div>
                 <div class="text-container">
                     <h1>Making childcare accessible for every family</h1>
@@ -290,7 +292,7 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="assets/js/main.js"></script>
-    <script src="assets/js/stories.js"></script>
+    <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/stories.js" defer></script>
 </body>
 </html>
